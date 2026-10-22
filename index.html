@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog Dogtore maquette</title>
+<link rel="stylesheet" href="https://use.typekit.net/thc2gzz.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#578BB2;       /* bleu principal : nav, H1, liens */
+  --navy:#395B75;       /* top bar, footer, BRAND */
+  --sky:#4DAAE9;        /* onglet BLOG actif */
+  --title:#1660A7;      /* H2 des guides */
+  --orange:#F28E2E;     /* CTA ACQUISTA ORA, prix */
+  --ice:#E8F2F9;        /* bandeau snack */
+  --ice2:#DDE8F0;
+  --grey-bg:#F1F1F1;
+  --line:#D0D5D5;
+  --text:#282A2B;
+  --muted:#646464;
+  --white:#fff;
+  --font:museo-sans-rounded,"Nunito","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);color:var(--text);background:var(--white);font-size:16px;line-height:1.5;font-weight:400}
+a{color:var(--blue);text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px}
+
+/* Top bar */
+.topbar{background:var(--navy);color:#fff;font-size:12px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:30px}
+.topbar a{color:#fff;margin-right:14px}
+.topbar svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:1.6}
+
+/* Header */
+.header .wrap{display:flex;align-items:center;gap:24px;height:66px}
+.logo img{height:40px;width:auto}
+.search-top{flex:1;max-width:340px;margin-left:auto;display:flex;border:1px solid #C0C0C0;border-radius:2px;height:38px}
+.search-top input{flex:1;border:0;padding:0 12px;font:inherit;font-size:14px;outline:0}
+.search-top button{border:0;background:none;padding:0 12px;cursor:pointer}
+.btn-out{border:1px solid var(--blue);color:var(--blue);background:#fff;padding:8px 46px;font-weight:500;font-size:15px}
+.btn-cart{background:var(--blue);color:#fff;display:flex;align-items:center;gap:14px;padding:6px 10px 6px 14px;font-size:14px}
+.btn-cart .qty{background:#fff;color:var(--blue);border-radius:50%;width:22px;height:22px;display:grid;place-items:center;font-size:12px}
+
+/* Nav */
+.nav{background:var(--blue)}
+.nav ul{list-style:none;display:flex;justify-content:center;max-width:1280px;margin:0 auto;overflow-x:auto}
+.nav li a{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;color:#fff;font-weight:700;font-size:13px;text-transform:uppercase;padding:10px 12px 9px;height:92px;white-space:nowrap}
+.nav li a .ic{width:59px;height:46px;background-size:cover;background-repeat:no-repeat;background-position:0 0}
+.nav li.brand a{background:var(--navy);justify-content:center;padding:0 22px}
+.nav li.blog a{background:var(--sky);justify-content:center;padding:0 22px}
+.snack{background:var(--ice);text-align:center;font-size:14px;padding:12px 16px}
+.snack a{text-decoration:underline}
+
+/* Breadcrumb */
+.crumbs{font-size:12px;color:var(--muted);padding:16px 0 0}
+.crumbs a{color:var(--muted)}
+
+/* Hero */
+.hero{padding:18px 0 40px}
+.h1-band{display:inline;background:var(--blue);color:#fff;font-weight:700;font-size:26px;text-transform:uppercase;line-height:1.55;padding:2px 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:start;margin-top:4px}
+.hero p.lead{margin:18px 0 22px;font-size:17px;font-weight:300;max-width:560px}
+.hero p.lead strong{font-weight:700}
+.bigsearch{display:flex;border:2px solid var(--blue);background:#fff;height:56px;max-width:580px}
+.bigsearch input{flex:1;border:0;padding:0 18px;font:inherit;font-size:16px;outline:0;font-weight:300}
+.bigsearch button{background:var(--blue);border:0;color:#fff;font:inherit;font-weight:700;text-transform:uppercase;font-size:14px;padding:0 22px;cursor:pointer;display:flex;align-items:center;gap:8px}
+.bigsearch svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;font-size:13px}
+.chips span{color:var(--muted);margin-right:2px;align-self:center}
+.chip{border:1px solid var(--blue);color:var(--blue);padding:4px 12px;border-radius:30px;background:#fff;cursor:pointer;font:inherit;font-size:13px}
+.chip:hover,.chip.on{background:var(--blue);color:#fff}
+.trust{display:flex;gap:28px;margin-top:28px;flex-wrap:wrap}
+.trust div{display:flex;align-items:center;gap:10px;font-size:13px;line-height:1.3}
+.trust b{display:block;font-size:22px;color:var(--title);font-weight:800}
+.trust .vet{width:42px;height:42px;border-radius:50%;background:var(--ice);display:grid;place-items:center}
+.trust svg{width:22px;height:22px;stroke:var(--blue);fill:none;stroke-width:1.8}
+
+.feat{position:relative;display:block;color:var(--text);border:1px solid var(--ice2);background:#fff}
+.feat .img{aspect-ratio:16/9;background:var(--ice) center/cover no-repeat}
+.feat .tag{position:absolute;top:14px;left:14px;background:var(--orange);color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;padding:4px 10px}
+.feat .body{padding:18px 20px 20px}
+.feat h2{font-size:21px;line-height:1.3;color:var(--title);font-weight:700;margin:6px 0 8px}
+.feat p{font-size:14px;color:var(--muted);font-weight:300}
+.meta{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin-top:12px}
+.meta .av{width:24px;height:24px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:10px;font-weight:700}
+.kicker{font-size:12px;font-weight:700;text-transform:uppercase;color:var(--blue);letter-spacing:.3px}
+
+/* Section titles, style "I NOSTRI PROPRI BRAND" */
+.sec{padding:44px 0}
+.sec.ice{background:var(--ice)}
+.sec-title{text-align:center;font-size:26px;font-weight:300;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.sec-sub{text-align:center;color:var(--muted);font-weight:300;font-size:15px;margin-bottom:28px}
+
+/* Species tiles */
+.species{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.sp{background:#fff;border:1px solid var(--ice2);display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px 10px 16px;color:var(--text);font-weight:700;text-transform:uppercase;font-size:14px;cursor:pointer;transition:.15s}
+.sp .circle{width:76px;height:76px;border-radius:50%;background:var(--blue);display:grid;place-items:center}
+.sp .circle i{width:52px;height:41px;background-size:cover;background-repeat:no-repeat;background-position:0 0}
+.sp small{font-weight:300;text-transform:none;color:var(--muted);font-size:12px}
+.sp:hover,.sp.on{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue) inset}
+
+/* Themes */
+.themes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.th{position:relative;display:flex;align-items:flex-end;min-height:190px;color:#fff;background:var(--navy) center/cover no-repeat;overflow:hidden}
+.th::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(57,91,117,.05) 25%,rgba(57,91,117,.92) 100%)}
+.th .in{position:relative;padding:18px 20px}
+.th h3{font-size:20px;font-weight:700;text-transform:uppercase;line-height:1.2}
+.th p{font-size:13px;font-weight:300;margin-top:4px;opacity:.95}
+.th .go{display:inline-block;margin-top:10px;background:var(--orange);color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;padding:5px 12px}
+.th.big{grid-row:span 2;min-height:398px}
+.th.big h3{font-size:26px}
+
+/* Authors */
+.authors{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.au{background:#fff;border:1px solid var(--ice2);padding:24px 18px 20px;text-align:center}
+.au .ph{width:92px;height:92px;border-radius:50%;margin:0 auto 12px;background:var(--ice);border:3px solid var(--blue);display:grid;place-items:center;font-size:28px;font-weight:800;color:var(--blue)}
+.au h4{font-size:16px;font-weight:700}
+.au .role{font-size:12px;color:var(--blue);font-weight:700;text-transform:uppercase;margin:2px 0 8px}
+.au p{font-size:13px;color:var(--muted);font-weight:300}
+.au a{display:inline-block;margin-top:12px;font-size:13px;font-weight:500;border:1px solid var(--blue);padding:5px 14px}
+.au a:hover{background:var(--blue);color:#fff}
+
+/* Species blocks */
+.block{padding:40px 0 10px}
+.block-head{display:flex;align-items:center;gap:14px;border-bottom:2px solid var(--blue);padding-bottom:10px;margin-bottom:18px;flex-wrap:wrap}
+.block-head .circle{width:46px;height:46px;border-radius:50%;background:var(--blue);display:grid;place-items:center}
+.block-head .circle i{width:34px;height:27px;background-size:cover;background-repeat:no-repeat;background-position:0 0}
+.block-head h2{font-size:22px;color:var(--title);text-transform:uppercase;font-weight:700}
+.block-head .filters{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+.block-head .all{font-size:14px;font-weight:500;margin-left:10px;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{display:flex;flex-direction:column;color:var(--text);background:#fff;border:1px solid var(--ice2);transition:.15s}
+.card:hover{border-color:var(--blue);box-shadow:0 4px 14px rgba(57,91,117,.15)}
+.card .img{aspect-ratio:3/2;background:var(--ice) center/cover no-repeat;position:relative}
+.card .img .t{position:absolute;left:0;bottom:0;background:var(--blue);color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;padding:3px 9px}
+.card .body{padding:12px 14px 14px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:15px;line-height:1.35;font-weight:700;color:var(--text)}
+.card:hover h3{color:var(--title)}
+.card .meta{margin-top:auto;padding-top:12px}
+.card.hide{display:none}
+.empty{display:none;text-align:center;color:var(--muted);padding:30px 0}
+
+/* Help band + reassurance */
+.help{background:var(--blue);color:#fff;padding:30px 0;margin-top:46px}
+.help .wrap{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.help h3{font-size:22px;text-transform:uppercase;font-weight:700}
+.help p{font-weight:300;font-size:15px;max-width:720px}
+.btn-orange{background:var(--orange);color:#fff;font-weight:700;text-transform:uppercase;font-size:14px;padding:12px 22px;margin-left:auto;white-space:nowrap}
+.reass{background:var(--ice)}
+.reass .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;padding:26px 20px}
+.reass b{display:block;font-size:13px;text-transform:uppercase;color:var(--navy)}
+.reass span{font-size:12px;font-weight:300}
+
+footer{background:var(--navy);color:#fff;font-size:13px}
+footer .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:34px 20px}
+footer h5{font-size:13px;text-transform:uppercase;margin-bottom:10px}
+footer a{color:#fff;display:block;font-weight:300;line-height:1.9}
+.legal{background:var(--blue);text-align:center;font-size:12px;padding:10px;color:#fff}
+
+.note{position:fixed;right:14px;bottom:14px;background:#fff;border:1px solid var(--orange);color:var(--text);font-size:12px;padding:8px 12px;max-width:260px;box-shadow:0 4px 12px rgba(0,0,0,.12);z-index:9}
+.note b{color:var(--orange)}
+
+@media (max-width:1100px){
+  .hero-grid{grid-template-columns:1fr}
+  .species{grid-template-columns:repeat(3,1fr)}
+  .grid,.authors{grid-template-columns:repeat(2,1fr)}
+  .themes{grid-template-columns:1fr 1fr}
+  .th.big{grid-row:auto;min-height:220px}
+  .reass .wrap,footer .wrap{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .topbar .links{display:none}
+  .search-top,.btn-out{display:none}
+  .nav ul{justify-content:flex-start}
+  .h1-band{font-size:21px}
+  .species{grid-template-columns:repeat(2,1fr)}
+  .grid,.authors,.themes{grid-template-columns:1fr}
+  .bigsearch button span{display:none}
+  .block-head .filters{margin-left:0;width:100%}
+  .reass .wrap,footer .wrap{grid-template-columns:1fr}
+  .note{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <div class="links"><a href="#">Contatto</a><a href="#">Fedeltà</a><a href="#">Consigli</a><a href="#">Fai la differenza</a><a href="#">Tracking consegna</a></div>
+  <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+</div></div>
+
+<header class="header"><div class="wrap">
+  <a class="logo" href="https://www.dogtore.it/"><img src="https://www.dogtore.it/media/logo/stores/15/logo-it.png" alt="dogtore.it"></a>
+  <form class="search-top" onsubmit="return false"><input placeholder="Ricerca..."><button aria-label="Cerca"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#282A2B" stroke-width="2.4"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button></form>
+  <a class="btn-out" href="#">ACCEDI</a>
+  <a class="btn-cart" href="#"><svg width="22" height="18" viewBox="0 0 24 20" fill="#fff"><path d="M0 1h4l3 11h12l3-8H6.5L6 2.5"/><circle cx="9" cy="17" r="2"/><circle cx="18" cy="17" r="2"/></svg>0.00 €<span class="qty">0</span></a>
+</div></header>
+
+<nav class="nav"><ul>
+  <li><a href="https://www.dogtore.it/gatto.html"><i class="ic" style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Chat.png)"></i>Gatto</a></li>
+  <li><a href="https://www.dogtore.it/cane.html"><i class="ic" style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Chien.png)"></i>Cane</a></li>
+  <li><a href="https://www.dogtore.it/roditori-co.html"><i class="ic" style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Rongeur-2.png)"></i>Roditori &amp; Co</a></li>
+  <li><a href="https://www.dogtore.it/cavalli.html"><i class="ic" style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Cheval.png)"></i>Cavalli</a></li>
+  <li><a href="#"><i class="ic" style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Animaux-de-la-ferme.png)"></i>Animali della fattoria</a></li>
+  <li><a href="https://www.dogtore.it/pesci.html"><i class="ic" style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Poisson.png)"></i>Pesci</a></li>
+  <li><a href="#"><i class="ic" style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Autres2.png)"></i>Altri</a></li>
+  <li class="brand"><a href="#">Brand</a></li>
+  <li class="blog"><a href="#">Blog</a></li>
+</ul></nav>
+<div class="snack">Una selezione unica di <b>snack</b> per <a href="#">cani</a> &amp; <a href="#">gatti</a> : più scelta, più gusto</div>
+
+<main>
+<section class="hero"><div class="wrap">
+  <div class="crumbs"><a href="https://www.dogtore.it/">Home</a> &gt; Blog &amp; guide veterinarie</div>
+  <div class="hero-grid" style="margin-top:14px">
+    <div>
+      <h1><span class="h1-band">Il blog di Dogtore : guide e consigli scritti da veterinari</span></h1>
+      <p class="lead">Alimentazione, salute, antiparassitari, razze, educazione : <strong>oltre 400 guide</strong> redatte dal team veterinario del gruppo La Compagnie des Animaux per prenderti cura di cane, gatto, cavallo e di tutti i tuoi animali.</p>
+      <form class="bigsearch" onsubmit="return false">
+        <input id="q" placeholder="Cerca una guida : artrosi, crocchette, pulci, Beagle..." autocomplete="off">
+        <button><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg><span>Cerca</span></button>
+      </form>
+      <div class="chips"><span>Ricerche frequenti :</span>
+        <button class="chip" data-q="artrosi">Artrosi</button>
+        <button class="chip" data-q="antipulci">Antipulci</button>
+        <button class="chip" data-q="crocchette">Crocchette</button>
+        <button class="chip" data-q="colpo di calore">Colpo di calore</button>
+        <button class="chip" data-q="CBD">CBD</button>
+      </div>
+      <div class="trust">
+        <div><span class="vet"><svg viewBox="0 0 24 24"><path d="M12 3v6M9 6h6"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/><circle cx="12" cy="11" r="0.5"/></svg></span><div><b>100%</b>guide veterinarie</div></div>
+        <div><span class="vet"><svg viewBox="0 0 24 24"><path d="M4 5h11a3 3 0 0 1 3 3v12H7a3 3 0 0 1-3-3z"/><path d="M8 9h6M8 13h6"/></svg></span><div><b>400+</b>guide pubblicate</div></div>
+        <div><span class="vet"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span><div><b>6</b>famiglie di animali</div></div>
+      </div>
+    </div>
+
+    <a class="feat" href="https://www.dogtore.it/cibo-per-gatti-guida-scelta">
+      <div class="img" style="background-image:url(https://madmin.lacompagniedesanimaux.com/media/wysiwyg/Dogtore_IT/gatti-mangiano-cibo-per-gatti.jpg)"></div>
+      <span class="tag">In primo piano</span>
+      <div class="body">
+        <div class="kicker">Gatto · Alimentazione</div>
+        <h2>Cibo per gatti : guida alla scelta dell'alimentazione ideale per il tuo felino</h2>
+        <p>Fabbisogni nutrizionali, paté o crocchette, etichette, quantità giornaliere e idratazione : tutto per scegliere l'alimento giusto.</p>
+        <div class="meta"><span class="av">TV</span>Team Veterinario Dogtore</div>
+      </div>
+    </a>
+  </div>
+</div></section>
+
+<section class="sec ice"><div class="wrap">
+  <h2 class="sec-title">Scegli il tuo animale</h2>
+  <p class="sec-sub">Tutte le guide veterinarie ordinate per specie</p>
+  <div class="species">
+    <div class="sp" data-sp="cane"><span class="circle"><i style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Chien.png)"></i></span>Cane<small>Salute, razze, educazione</small></div>
+    <div class="sp" data-sp="gatto"><span class="circle"><i style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Chat.png)"></i></span>Gatto<small>Alimentazione, salute, razze</small></div>
+    <div class="sp" data-sp="cavallo"><span class="circle"><i style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Cheval.png)"></i></span>Cavallo<small>Coliche, articolazioni, cute</small></div>
+    <div class="sp" data-sp="roditori"><span class="circle"><i style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Rongeur-2.png)"></i></span>Roditori &amp; Co<small>Coniglio, criceto, cavia</small></div>
+    <div class="sp" data-sp="fattoria"><span class="circle"><i style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Animaux-de-la-ferme.png)"></i></span>Fattoria<small>Galline, capre</small></div>
+    <div class="sp" data-sp="pesci"><span class="circle"><i style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Poisson.png)"></i></span>Pesci<small>Acquario</small></div>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <h2 class="sec-title">Temi in evidenza</h2>
+  <p class="sec-sub">I grandi dossier dei nostri veterinari</p>
+  <div class="themes">
+    <a class="th big" href="https://www.dogtore.it/quale-antipulci-antizecche-scegliere-per-il-mio-cane" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Quale_antipulci_antizecche_scegliere_1.jpg)"><div class="in"><h3>Antiparassitari</h3><p>Pulci, zecche, leishmaniosi, filaria : come proteggere cane e gatto tutto l'anno.</p><span class="go">Scopri il dossier</span></div></a>
+    <a class="th" href="https://www.dogtore.it/quale-alimentazione-scegliere-per-il-mio-cane-i-nostri-consigli-veterinari" style="background-image:url(https://www.dogtore.it/media//wysiwyg/cms/GUIDE-SUR-L_ALIMENTATION-DU-CHIEN.jpg)"><div class="in"><h3>Alimentazione</h3><p>Crocchette, paté, BARF, diete veterinarie.</p></div></a>
+    <a class="th" href="https://www.dogtore.it/come-alleviare-l-artrosi-del-cane" style="background-image:url(https://www.dogtore.it/media//wysiwyg/cms/comment_soulager_l_arthrose_du_chien.jpg)"><div class="in"><h3>Artrosi &amp; articolazioni</h3><p>Riconoscere i segnali e alleviare il dolore.</p></div></a>
+    <a class="th" href="https://www.dogtore.it/focus-razza-il-cane-giapponese-akita-inu" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/Akita_Inu.jpg)"><div class="in"><h3>Focus razza</h3><p>Carattere, salute e cura di ogni razza.</p></div></a>
+    <a class="th" href="https://www.dogtore.it/addestrare-cane-richiamo-metodo" style="background-image:url(https://madmin.lacompagniedesanimaux.com/media//wysiwyg/cms/Dressage_Chien_1.jpg)"><div class="in"><h3>Educazione &amp; comportamento</h3><p>Richiamo, abbaio, ansia, socializzazione.</p></div></a>
+  </div>
+</div></section>
+
+<section class="sec ice"><div class="wrap">
+  <h2 class="sec-title">I nostri veterinari</h2>
+  <p class="sec-sub">Chi scrive e verifica le guide del blog</p>
+  <div class="authors">
+    <div class="au"><div class="ph">PD</div><h4>Dott. Philippe Drouet</h4><div class="role">Veterinario, fondatore</div><p>Fondatore del gruppo La Compagnie des Animaux, promotore di una medicina veterinaria preventiva accessibile a tutti.</p><a href="#">Le sue guide</a></div>
+    <div class="au"><div class="ph">AL</div><h4>Dr. Aude Lhérété</h4><div class="role">Veterinario</div><p>Salute del cane e del gatto, alimentazione e prevenzione.</p><a href="#">Le sue guide</a></div>
+    <div class="au"><div class="ph">MA</div><h4>Dr. Muriel Alnot</h4><div class="role">Veterinario</div><p>Patologie croniche, integratori e benessere dell'animale.</p><a href="#">Le sue guide</a></div>
+    <div class="au"><div class="ph">TV</div><h4>Team Veterinario</h4><div class="role">La Compagnie des Animaux</div><p>Disponibile via e-mail dal lunedì al venerdì, dalle 9:00 alle 17:00.</p><a href="#">Tutte le guide</a></div>
+  </div>
+</div></section>
+
+<div class="wrap" id="guide">
+  <p class="empty" id="empty">Nessuna guida trovata. Prova con un'altra parola chiave.</p>
+
+  <div class="block" data-block="cane">
+    <div class="block-head"><span class="circle"><i style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Chien.png)"></i></span><h2>Guide Cane</h2>
+      <div class="filters"><button class="chip on" data-f="tutti">Tutti</button><button class="chip" data-f="alimentazione">Alimentazione</button><button class="chip" data-f="salute">Salute</button><button class="chip" data-f="antiparassitari">Antiparassitari</button><button class="chip" data-f="razze">Razze</button><button class="chip" data-f="educazione">Educazione</button></div>
+      <a class="all" href="#">Vedi tutte &gt;</a></div>
+    <div class="grid">
+      <a class="card" data-t="alimentazione" href="https://www.dogtore.it/quale-alimentazione-scegliere-per-il-mio-cane-i-nostri-consigli-veterinari"><div class="img" style="background-image:url(https://www.dogtore.it/media//wysiwyg/cms/GUIDE-SUR-L_ALIMENTATION-DU-CHIEN.jpg)"><span class="t">Alimentazione</span></div><div class="body"><h3>Alimentazione per cani : guida completa alla scelta migliore</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="salute" href="https://www.dogtore.it/come-alleviare-l-artrosi-del-cane"><div class="img" style="background-image:url(https://www.dogtore.it/media//wysiwyg/cms/comment_soulager_l_arthrose_du_chien.jpg)"><span class="t">Salute</span></div><div class="body"><h3>Artrosi del cane : cause, sintomi e trattamenti</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="antiparassitari" href="https://www.dogtore.it/quale-antipulci-antizecche-scegliere-per-il-mio-cane"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Quale_antipulci_antizecche_scegliere_1.jpg)"><span class="t">Antiparassitari</span></div><div class="body"><h3>Quale antipulci &amp; antizecche scegliere per il mio cane ?</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="educazione" href="https://www.dogtore.it/addestrare-cane-richiamo-metodo"><div class="img" style="background-image:url(https://madmin.lacompagniedesanimaux.com/media//wysiwyg/cms/Dressage_Chien_1.jpg)"><span class="t">Educazione</span></div><div class="body"><h3>Come addestrare un cane : la guida completa all'educazione</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="salute" href="https://www.dogtore.it/la-displasia-della-anca-nel-cane-sintomi-e-trattamenti"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/La_displasia_dell_anca_nel_cane.jpg)"><span class="t">Salute</span></div><div class="body"><h3>La displasia dell'anca nel cane : sintomi e trattamenti</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="razze" href="https://www.dogtore.it/il-beagle"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/il_beagle.jpg)"><span class="t">Razze</span></div><div class="body"><h3>Sapere tutto sul Beagle</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="alimentazione salute" href="https://www.dogtore.it/allergia-alimentare-cane-sintomi-intolleranza-diagnosi"><div class="img" style="background-image:url(https://www.dogtore.it/media/.renditions/wysiwyg/Dogtore_IT/Allergia_alimentare_nel_cane_consigli.jpg)"><span class="t">Alimentazione</span></div><div class="body"><h3>Allergia alimentare nel cane : sintomi e crocchette ipoallergeniche</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="salute" href="https://www.dogtore.it/uso-del-cannabidiolo-nei-cani"><div class="img" style="background-image:url(https://madmin.lacompagniedesanimaux.com/media/wysiwyg/Dogtore_IT/Benefici_del_CBD_per_i_cani.jpg)"><span class="t">Benessere naturale</span></div><div class="body"><h3>Benefici del CBD nei cani : guida e feedback di esperti veterinari</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+    </div>
+  </div>
+
+  <div class="block" data-block="gatto">
+    <div class="block-head"><span class="circle"><i style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Chat.png)"></i></span><h2>Guide Gatto</h2>
+      <div class="filters"><button class="chip on" data-f="tutti">Tutti</button><button class="chip" data-f="alimentazione">Alimentazione</button><button class="chip" data-f="salute">Salute</button><button class="chip" data-f="razze">Razze</button><button class="chip" data-f="accessori">Accessori</button></div>
+      <a class="all" href="#">Vedi tutte &gt;</a></div>
+    <div class="grid">
+      <a class="card" data-t="alimentazione" href="https://www.dogtore.it/cibo-per-gatti-guida-scelta"><div class="img" style="background-image:url(https://madmin.lacompagniedesanimaux.com/media/wysiwyg/Dogtore_IT/gatti-mangiano-cibo-per-gatti.jpg)"><span class="t">Alimentazione</span></div><div class="body"><h3>Cibo per gatti : come scegliere l'alimento giusto</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="salute" href="https://www.dogtore.it/guida-come-evitare-i-vomiti-di-boli-di-pelo-nel-gatto"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/cms/Comment_eliminer_les_boules_de_poils_du_chat.jpg)"><span class="t">Salute</span></div><div class="body"><h3>Come eliminare i boli di pelo nel gatto ? Cause, sintomi e trattamenti</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="salute" href="https://www.dogtore.it/cistite-gatto-cause-sintomi-cura-rimedi-naturali"><div class="img" style="background-image:url(https://www.dogtore.it/media//wysiwyg/cms/Marquage_Urinaire_Chat.jpg)"><span class="t">Salute</span></div><div class="body"><h3>Tutto quello che devi sapere sulla cistite del gatto</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="razze" href="https://www.dogtore.it/il-gatto-bengala"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/Il_gatto_Bengala.jpg)"><span class="t">Razze</span></div><div class="body"><h3>Il gatto Bengala : tutto su questa razza unica</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="salute alimentazione" href="https://www.dogtore.it/il-diabete-nel-gatto"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/Il_diabete_nel_gatto.jpg)"><span class="t">Salute</span></div><div class="body"><h3>Il diabete nei gatti : cosa fare per curarlo ?</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="accessori" href="https://www.dogtore.it/accessori-smart-gatto"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/Accessori-smart-gatti.jpg)"><span class="t">Accessori</span></div><div class="body"><h3>Accessori smart e tech per gatti : migliori gadget e consigli</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="alimentazione" href="https://www.dogtore.it/dieta-barf-per-cani-gatti-cose-e-come-funziona"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/La_dieta_BARF.jpg)"><span class="t">Alimentazione</span></div><div class="body"><h3>Dieta BARF per cani e gatti : cos'è, benefici e rischi</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+    </div>
+  </div>
+
+  <div class="block" data-block="cavallo">
+    <div class="block-head"><span class="circle"><i style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Cheval.png)"></i></span><h2>Guide Cavallo</h2>
+      <div class="filters"><button class="chip on" data-f="tutti">Tutti</button><button class="chip" data-f="salute">Salute</button><button class="chip" data-f="prevenzione">Prevenzione</button><button class="chip" data-f="razze">Razze</button></div>
+      <a class="all" href="#">Vedi tutte &gt;</a></div>
+    <div class="grid">
+      <a class="card" data-t="salute" href="https://www.dogtore.it/coliche-cavallo-cause-sintomi-rimedi"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/ragadi_cavallo.jpg)"><span class="t">Salute</span></div><div class="body"><h3>Coliche nel cavallo : cause, sintomi, tipi e cosa fare subito</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="salute" href="https://www.dogtore.it/l-artrosi-nei-cavalli"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/artrosi_cavallo.jpg)"><span class="t">Salute</span></div><div class="body"><h3>L'artrosi nei cavalli</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="prevenzione salute" href="https://www.dogtore.it/dermatite-da-fango-cavallo"><div class="img" style="background-image:url(https://madmin.lacompagniedesanimaux.com/media/wysiwyg/Dogtore_IT/La_febbre_da_fango_nei_cavalli.jpg)"><span class="t">Prevenzione</span></div><div class="body"><h3>La dermatite da fango nel cavallo : rimedi e prevenzione</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="razze" href="https://www.dogtore.it/focus-razza-lappaloosa"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/Appaloosa.jpg)"><span class="t">Razze</span></div><div class="body"><h3>Tutto quello che devi sapere sul cavallo Appaloosa</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="prevenzione" href="https://www.dogtore.it/individuare-e-gestire-un-colpo-di-freddo-nei-cavalli"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/colpo_di_freddo_cavallo.png)"><span class="t">Prevenzione</span></div><div class="body"><h3>Il colpo di freddo nei cavalli</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="prevenzione" href="https://www.dogtore.it/colpo-di-calore-nei-cavalli"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/malattia_animale_3_.png)"><span class="t">Prevenzione</span></div><div class="body"><h3>Colpo di calore nel cavallo : cause, sintomi e soluzioni</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+    </div>
+  </div>
+
+  <div class="block" data-block="roditori">
+    <div class="block-head"><span class="circle"><i style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Rongeur-2.png)"></i></span><h2>Guide Roditori &amp; Co</h2>
+      <a class="all" href="#" style="margin-left:auto">Vedi tutte &gt;</a></div>
+    <div class="grid">
+      <a class="card" data-t="alimentazione" href="https://www.dogtore.it/quali-verdure-dovresti-dare-al-tuo-coniglio"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/Quale_verdure_dare_al_mio_coniglio.jpg)"><span class="t">Coniglio</span></div><div class="body"><h3>Quali verdure dare al mio coniglio ?</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="razze" href="https://www.dogtore.it/focus-razza-il-criceto"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/le_hamster.jpg)"><span class="t">Criceto</span></div><div class="body"><h3>Focus razza : il Criceto</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="razze" href="https://www.dogtore.it/accogliere-una-cavia-domestica-o-porcellino-d-india"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/Porcellino_d_India.jpg)"><span class="t">Cavia</span></div><div class="body"><h3>Come accogliere una cavia o Porcellino d'India ?</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+    </div>
+  </div>
+
+  <div class="block" data-block="fattoria">
+    <div class="block-head"><span class="circle"><i style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Animaux-de-la-ferme.png)"></i></span><h2>Guide Fattoria &amp; Pesci</h2>
+      <a class="all" href="#" style="margin-left:auto">Vedi tutte &gt;</a></div>
+    <div class="grid">
+      <a class="card" data-t="prevenzione" data-sp="fattoria" href="https://www.dogtore.it/il-colpo-di-calore-nelle-galline"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/malattia_animale_4_.png)"><span class="t">Galline</span></div><div class="body"><h3>Proteggere le galline dai colpi di calore</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+      <a class="card" data-t="acquario" data-sp="pesci" href="https://www.dogtore.it/come-iniziare-a-fare-un-acquario"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/Come_iniziare_un_acquario_1.jpg)"><span class="t">Acquario</span></div><div class="body"><h3>Come iniziare a fare un acquario ?</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div></div></a>
+    </div>
+  </div>
+</div>
+
+<section class="help"><div class="wrap">
+  <div><h3>Hai una domanda per i nostri veterinari ?</h3>
+  <p>I nostri veterinari sono a tua disposizione via e-mail dal lunedì al venerdì dalle ore 9:00 alle ore 17:00.</p></div>
+  <a class="btn-orange" href="#">Contatta un veterinario</a>
+</div></section>
+</main>
+
+<div class="reass"><div class="wrap">
+  <div><b>Spedizione 24/48h</b><span>Gratuita a partire da 100€ di acquisto con GLS</span></div>
+  <div><b>Pagamenti sicuri</b><span>Visa, Mastercard, Paypal, Apple Pay, Alma</span></div>
+  <div><b>Soddisfazione garantita</b><span>Reso entro 14 giorni dopo l'ordine</span></div>
+  <div><b>Prodotti di qualità</b><span>Prodotti veterinari e grandi marche + 5 000 referenze</span></div>
+  <div><b>Servizio clienti</b><span>02 87 36 77 78, dal lunedì al venerdì 9:00-17:00</span></div>
+</div></div>
+
+<footer><div class="wrap">
+  <div><h5>Chi siamo ?</h5><a href="https://www.dogtore.it/faq/chi-siamo">Il nostro team</a><a href="#">Informazioni legali</a></div>
+  <div><h5>Bisogno di aiuto</h5><a href="#">Tracciare un pacco</a><a href="#">Restituire un articolo</a><a href="#">Spese di trasporto</a><a href="#">FAQ</a></div>
+  <div><h5>Consigli &amp; guide all'acquisto</h5><a href="#">Alimentazione per cane</a><a href="#">Antiparassitario per gatto</a><a href="#">Tutte le nostre guide</a></div>
+  <div><h5>Al tuo servizio</h5><a href="#">I nostri veterinari via e-mail, dal lunedì al venerdì 9:00-17:00</a></div>
+</div><div class="legal">CGV · Privacy</div></footer>
+
+<div class="note"><b>Maquette datashake</b> : hub blog Dogtore, DA calquée sur dogtore.it. Recherche, chips et filtres fonctionnels.</div>
+
+<script>
+const q=document.getElementById('q'),cards=[...document.querySelectorAll('.card')],blocks=[...document.querySelectorAll('.block')],empty=document.getElementById('empty');
+let sp=null;
+const norm=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+function apply(){
+  const term=norm(q.value.trim());let shown=0;
+  blocks.forEach(b=>{
+    const f=(b.querySelector('.filters .chip.on')||{}).dataset?.f||'tutti';
+    let n=0;
+    b.querySelectorAll('.card').forEach(c=>{
+      const cSp=c.dataset.sp||b.dataset.block;
+      const ok=(!term||norm(c.textContent).includes(term))&&(f==='tutti'||c.dataset.t.includes(f))&&(!sp||cSp===sp||(sp==='pesci'&&b.dataset.block==='fattoria'&&cSp==='pesci'));
+      c.classList.toggle('hide',!ok);if(ok)n++;
+    });
+    b.style.display=n?'':'none';shown+=n;
+  });
+  empty.style.display=shown?'none':'block';
+}
+q.addEventListener('input',apply);
+document.querySelectorAll('.chips .chip').forEach(c=>c.onclick=()=>{q.value=c.dataset.q;apply();document.getElementById('guide').scrollIntoView({behavior:'smooth'})});
+document.querySelectorAll('.filters .chip').forEach(c=>c.onclick=()=>{c.parentNode.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');apply()});
+document.querySelectorAll('.sp').forEach(t=>t.onclick=()=>{
+  const v=t.dataset.sp;sp=sp===v?null:v;
+  document.querySelectorAll('.sp').forEach(x=>x.classList.toggle('on',x.dataset.sp===sp));
+  apply();document.getElementById('guide').scrollIntoView({behavior:'smooth'});
+});
+</script>
+</body>
+</html>
