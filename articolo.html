@@ -242,6 +242,34 @@ aside{position:sticky;top:16px}
 .related .help{margin-top:0}
 @media (max-width:1100px){.art-grid{grid-template-columns:1fr}aside{position:static;order:-1}.push{display:grid;grid-template-columns:1fr 1fr}.push-h{grid-column:1/-1}.push-alt,.push-all{grid-column:1/-1}}
 @media (max-width:640px){.push{display:block}.art-meta{gap:8px 14px}}
+
+.bn{display:flex;align-items:center;gap:22px;padding:22px 24px;margin:30px 0;position:relative;overflow:hidden}
+.bn-txt{flex:1;min-width:0}
+.bn-k{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-bottom:2px}
+.bn h4{font-size:21px;font-weight:800;line-height:1.25;margin-bottom:6px}
+.bn p{font-size:14px;font-weight:300;margin:0 0 12px}
+.bn-cta{display:flex;flex-wrap:wrap;gap:10px}
+.bn img{width:150px;height:150px;object-fit:contain;flex:none;margin:0;background:#fff}
+.bn img.ph{object-fit:cover;width:190px;height:150px}
+.bn-ice{background:var(--ice);border-left:5px solid var(--blue)}.bn-ice .bn-k{color:var(--orange)}.bn-ice h4{color:var(--title)}
+.bn-navy{background:var(--navy);color:#fff}.bn-navy .bn-k{color:#9FC6E4}
+.bn-big{font-size:64px;font-weight:800;color:var(--orange);line-height:1;flex:none;padding-right:10px}
+.bn-orange{background:var(--orange);color:#fff}.bn-orange p{margin:0}
+.bn-blue{background:var(--blue);color:#fff}.bn-blue p{margin:0}
+.content .bn a{text-decoration:none}
+.cta-o,.cta-l,.cta-w,.cta-b{display:inline-block;font-size:13px;font-weight:700;text-transform:uppercase;padding:10px 18px;line-height:1.2;white-space:nowrap}
+.cta-o{background:var(--orange);color:#fff}
+.cta-l{background:#fff;color:var(--blue);border:1px solid var(--blue);padding:9px 17px}
+.cta-w{background:#fff;color:var(--navy)}
+.cta-b{background:var(--blue);color:#fff}
+.cta-o:hover,.cta-b:hover{filter:brightness(.93)}
+.bn-line{display:flex;align-items:center;gap:16px;justify-content:space-between;border:1px solid var(--blue);padding:12px 16px;margin:24px 0;font-size:14px;font-weight:500}
+.content .bn-line a{text-decoration:none}
+.quick{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:-6px 0 18px;font-size:13px}
+.quick span{color:var(--muted)}
+.quick a{border:1px solid var(--blue);border-radius:30px;padding:4px 12px;font-size:13px}
+.quick a:hover{background:var(--blue);color:#fff}
+@media (max-width:640px){.bn{flex-direction:column;align-items:flex-start}.bn img,.bn img.ph{width:100%;height:160px}.bn-big{font-size:44px}.bn-line{flex-direction:column;align-items:flex-start}.cta-o,.cta-l,.cta-w,.cta-b{white-space:normal}}
 </style>
 </head>
 <body>
@@ -282,6 +310,7 @@ aside{position:sticky;top:16px}
         <span class="who"><span class="av">TV</span><span><b>Team Veterinario</b><br>La Compagnie des Animaux</span></span>
         <span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Aggiornato il 28 lug 2025</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>19 min di lettura</span>
       </div>
+      <div class="quick"><span>In questa guida :</span><a href="https://www.dogtore.it/gatto/alimentazione-gatto/crocchette-gatto.html">Crocchette gatto</a><a href="https://www.dogtore.it/gatto/alimentazione-gatto/pate-gatto.html">Paté gatto</a><a href="https://www.dogtore.it/gatto/alimentazione-gatto/regimi-alimentari-gatto.html">Regimi alimentari</a><a href="https://www.dogtore.it/gatto/accessori-gatto/fontana-d-acqua.html">Fontane d'acqua</a></div>
       <img class="hero-img" src="https://www.dogtore.it/media/wysiwyg/Dogtore_IT/gatti-mangiano-cibo-per-gatti.jpg" alt="Cibo per gatti: guida all'alimentazione ideale illustrata da gatti che mangiano da ciotole">
       <div class="content">
 
@@ -374,7 +403,7 @@ aside{position:sticky;top:16px}
 <p><a href="https://www.dogtore.it/gatto/alimentazione-gatto/pate-gatto.html">Pat&eacute; e bustine</a> per gatto sono alimenti umidi con un contenuto di acqua che pu&ograve; raggiungere il 70-80%. Aiutano a <strong>mantenere una buona idratazione</strong>, fondamentale per<strong> prevenire disturbi urinari</strong> come la formazione di calcoli. Pi&ugrave; appetibili rispetto alle crocchette, sono particolarmente indicati per <strong>gatti convalescenti o con scarso appetito</strong>. Tuttavia, si conservano poco una volta aperti e, se usati come alimento unico, devono essere somministrati in quantit&agrave; maggiori per coprire i fabbisogni nutrizionali giornalieri.</p>
 <h3 id="mcetoc_1irsa8cb0h">L&rsquo;alimentazione mista per gatto</h3>
 <p>Un&rsquo;alimentazione mista consente al gatto di beneficiare dei vantaggi di crocchette e pat&eacute;. In genere, si consiglia di somministrare circa<strong> 2/3 di crocchette e 1/3 di alimento umido</strong> (come pat&eacute; o bustine). La chiave &egrave; trovare il <strong>giusto equilibrio, adattando la razione giornaliera</strong> alle esigenze individuali del gatto: et&agrave;, peso, stato di sterilizzazione, livello di attivit&agrave; fisica e condizioni del mantello sono tutti fattori da considerare per garantire benessere e salute.</p>
-<h2 id="mcetoc_1irsa8cb0i">Il cibo fatto in casa &egrave; migliore ?</h2>
+<div class="bn bn-ice"><div class="bn-txt"><div class="bn-k">Crocchette o paté ?</div><h4>Trova l'alimento giusto per il tuo gatto</h4><p>Oltre 5 000 referenze, marche veterinarie e la nostra gamma Dogteur.</p><div class="bn-cta"><a class="cta-o" href="https://www.dogtore.it/gatto/alimentazione-gatto/crocchette-gatto.html">Crocchette gatto</a><a class="cta-l" href="https://www.dogtore.it/gatto/alimentazione-gatto/pate-gatto.html">Paté gatto</a></div></div><img src="https://www.dogtore.it/media/catalog/product/cache/1c273764364f749adbf3002a3b57e765/d/o/dogteur_croquettes_premium_sans_c_r_ales_chat_st_rilis_6_kg_1_.jpg" alt="Crocchette Dogteur per gatto"></div><h2 id="mcetoc_1irsa8cb0i">Il cibo fatto in casa &egrave; migliore ?</h2>
 <p>L&rsquo;alimentazione casalinga, preparata con ingredienti freschi, pu&ograve; essere una buona scelta, ma deve essere&nbsp;<strong>perfettamente bilanciata</strong> per <strong>soddisfare le esigenze nutrizionali specifiche</strong> del gatto. Non &egrave; semplice da gestire: richiede l&rsquo;integrazione con vitamine e sali minerali che l&rsquo;animale non riesce a ricavare da solo. La quantit&agrave; e la composizione della razione devono essere <strong>definite da un nutrizionista veterinario</strong>. Inoltre, va somministrata in <strong>piccoli pasti distribuiti durante la giornata </strong>(una diecina di volte al giorno), rispettando la natura &ldquo;rosicchiatrice&rdquo; del gatto specifica al suo apparato digerente.</p>
 <h2 id="mcetoc_1irsa8cb0j">Come leggere l&rsquo;etichetta delle crocchette per gatto ?</h2>
 <p>Capire le etichette sui sacchetti di crocchette per gatto non &egrave; sempre semplice: le informazioni sono spesso tecniche e poco chiare. Tuttavia, <strong>alcune indicazioni sono obbligatorie per legge e soggette a normativa</strong>.</p>
@@ -385,7 +414,7 @@ aside{position:sticky;top:16px}
 <p>Scopri la nostra <a href="https://www.dogtore.it/alimentazione-senza-cereali-animali.html?specie=gatto">selezione di alimenti per gatto senza cereali qui</a>.</p>
 <h3 id="mcetoc_1irsa8cb0m">Nutrienti di qualit&agrave;</h3>
 <p><strong>I nutrienti presenti nelle crocchette per gatto</strong> devono essere di alta qualit&agrave;. &Egrave; importante fare attenzione alla dicitura <strong>"carne e sottoprodotti di origine animale"</strong>, poich&eacute; la quantit&agrave; effettiva di carne pu&ograve; essere molto ridotta. Le<strong> carni di buona qualit&agrave;</strong>, con un elevato valore biologico (VB=<strong>efficienza con cui l'organismo del gatto sar&agrave; in grado di assorbire le proteine</strong>), sono pi&ugrave; facilmente assimilabili dall&rsquo;organismo del gatto. Per questo motivo, le crocchette di fascia alta, che utilizzano ingredienti migliori, hanno un costo superiore rispetto a quelle economiche, spesso formulate con sottoprodotti.</p>
-<h2 id="mcetoc_1irsa8cb0n">Si possono dare gli avanzi della tavola al gatto ?</h2><p><img src="https://www.dogtore.it/media/wysiwyg/Dogtore_IT/gatto-tavola-cibi-pericolosi.jpg" alt="Gatto a tavola: alcuni cibi umani possono essere nocivi per i gatti" loading="lazy"></p>
+<div class="bn-line"><span>Il tuo gatto ha esigenze particolari (sovrappeso, reni, sensibilità digestiva) ?</span><a class="cta-b" href="https://www.dogtore.it/gatto/alimentazione-gatto/regimi-alimentari-gatto.html">Vedi i regimi alimentari</a></div><h2 id="mcetoc_1irsa8cb0n">Si possono dare gli avanzi della tavola al gatto ?</h2><p><img src="https://www.dogtore.it/media/wysiwyg/Dogtore_IT/gatto-tavola-cibi-pericolosi.jpg" alt="Gatto a tavola: alcuni cibi umani possono essere nocivi per i gatti" loading="lazy"></p>
 <p>&Egrave; comprensibile voler<strong> condividere qualche avanzo con il proprio gatto</strong>, ma &egrave; sconsigliato. Questo comportamento pu&ograve; incoraggiarlo a "rubare" il cibo e creare cattive abitudini. Se proprio non resisti, offrigli<strong> solo piccoli pezzi di carne o pesce</strong>, <strong>evitando alimenti grassi, salati</strong> (come il tonno in scatola),&nbsp;<strong>zuccherati o speziati</strong>. Questi possono causare sovrappeso (anche obesit&agrave; o diabete), disturbi digestivi (diarrea o flatulenza) o problemi cutanei. <strong>Ricorda</strong> inoltre, se gli dai gli avanzi, di <strong>ridurre la sua razione giornaliera</strong> per evitare squilibri nutrizionali.</p>
 <h2 id="mcetoc_1irsa8cb0o">Quali alimenti sono pericolosi per i gatti ?</h2>
 <p>Alcuni alimenti comuni possono essere molto pericolosi per la salute dei gatti:</p>
@@ -420,7 +449,7 @@ aside{position:sticky;top:16px}
 <li><strong>Contenuto calorico del cibo</strong></li>
 </ul>
 <p>&Egrave; consigliabile <strong>pesare regolarmente il gatto adulto</strong> e regolare le dosi per prevenire sovrappeso o carenze.</p>
-<h2 id="mcetoc_1irsa8cb0r">Quando dovrebbe mangiare il tuo gatto ?</h2>
+<div class="bn bn-navy"><div class="bn-txt"><div class="bn-k">Abbonamento Pass'Tranquillità</div><h4>Risparmia fino al 15% sul cibo del tuo gatto</h4><p>Abbonati alle crocchette del tuo gatto e non restare mai senza.</p><div class="bn-cta"><a class="cta-o" href="https://www.dogtore.it/marketing-com/pass-tranquillita.html">Scopri il Pass'Tranquillità</a></div></div><div class="bn-big">-15%</div></div><h2 id="mcetoc_1irsa8cb0r">Quando dovrebbe mangiare il tuo gatto ?</h2>
 <p>Il gatto &egrave; un animale abituato a mangiare&nbsp;<strong>molto spesso e in piccole quantit&agrave;</strong>: pu&ograve; arrivare a fare <strong>10&ndash;20 mini-pasti al giorno</strong>. Questo comportamento riflette la sua natura di cacciatore solitario e si adatta perfettamente al suo <strong>sistema digerente corto</strong>. Limitare i pasti a 2&ndash;3 al giorno, come si fa con i cani, pu&ograve; provocare <strong>frustrazione, stress o comportamenti aggressivi</strong> (nota come &ldquo;sindrome della tigre&rdquo; e caratterizzata dalla comparsa violenta e improvvisa di graffi, morsi, sibili&nbsp; conseguenti alla frustrazione e sensazione di fame). Meglio quindi lasciare sempre del cibo a disposizione, se possibile.</p>
 <p><img src="https://www.dogtore.it/media/wysiwyg/Dogtore_IT/dove-mettere-ciotola-gatto.jpg" alt="Gattino che mangia dalla ciotola: l&rsquo;importanza di scegliere il posto giusto per il pasto" loading="lazy"></p>
 <h2 id="mcetoc_1irsa8cb0t">Dove mettere la ciotola del gatto ?</h2>
@@ -465,11 +494,11 @@ aside{position:sticky;top:16px}
 <li><strong>allontanando</strong> l&rsquo;acqua dal cibo,</li>
 <li>o usando <a href="https://www.dogtore.it/gatto/accessori-gatto/fontana-d-acqua.html"><strong>fontanelle</strong></a> con acqua corrente, che i gatti trovano pi&ugrave; stimolante (<strong> i</strong>&nbsp;gatti amano l'acqua che sgorga da rubinetti, vasi di fiori, di pioggia nelle pozzanghere&hellip;..)</li>
 </ul>
-<h2 id="mcetoc_1irsa8cb013">Si pu&ograve; dare il latte al gatto ?</h2>
+<div class="bn bn-ice"><div class="bn-txt"><div class="bn-k">Idratazione</div><h4>Aiuta il tuo gatto a bere di più</h4><p>L'acqua in movimento invoglia il gatto a bere : scegli una fontanella adatta.</p><div class="bn-cta"><a class="cta-o" href="https://www.dogtore.it/gatto/accessori-gatto/fontana-d-acqua.html">Scopri le fontane d'acqua</a><a class="cta-l" href="https://www.dogtore.it/gatto/accessori-gatto/ciotola-gatto.html">Ciotole gatto</a></div></div><img class="ph" src="https://www.dogtore.it/media/wysiwyg/Dogtore_IT/gatti-bevono-fontana-acqua.jpg" alt="Gatti che bevono da una fontanella"></div><h2 id="mcetoc_1irsa8cb013">Si pu&ograve; dare il latte al gatto ?</h2>
 <p>In generale, <strong>&egrave; sconsigliato dare latte al gatto adulto</strong>. Dopo lo svezzamento, molti gatti perdono la capacit&agrave; di digerire <strong>lattosio</strong> (zucchero del latte) -&nbsp; in seguito alla scomparsa della secrezione di lattasi, un enzima che ne permette la digestione - o <strong>proteine del latte</strong> (caseina), sviluppando <strong>intolleranze</strong> o <strong>allergie</strong> che causano disturbi digestivi (diarrea, gonfiore) o reazioni cutanee (rossore e prurito).</p>
 <p>Alcuni gatti, per&ograve;, mantengono una <strong>tolleranza parziale</strong>: in questi casi si pu&ograve; somministrare <strong>piccole quantit&agrave;</strong> (massimo 10 ml per kg al giorno). L&rsquo;acqua resta comunque <strong>la miglior fonte di idratazione</strong>.</p>
 <p>Per maggiore informazioni leggi il nostro articolo <a href="https://www.dogtore.it/gatto-e-latte-fa-bene-o-male">Dare latte ai gatti: un abitudine da evitare ?</a></p>
-<h2 id="mcetoc_1irsa8cb014">FAQ</h2>
+<div class="bn bn-orange"><div class="bn-txt"><div class="bn-k">Offerta di benvenuto</div><h4>-5% sul tuo primo ordine</h4><p>Iscriviti alla newsletter e ricevi i consigli dei nostri veterinari.</p></div><div class="bn-cta"><a class="cta-w" href="https://www.dogtore.it/newsletter/inscription/">Iscriviti alla newsletter</a></div></div><h2 id="mcetoc_1irsa8cb014">FAQ</h2>
 <h3 id="mcetoc_1irsa8cb015">Come risparmiare sul cibo per gatti senza rinunciare alla qualit&agrave; ?</h3>
 <p>Acquistare online su Dogtore.it &egrave; una strategia efficace per risparmiare: il sito offre <a href="https://www.dogtore.it/gatto/alimentazione-gatto.html">un'<strong>ampia selezione di alimenti premium</strong> per gatti</a>, sia fisiologici che dietetici, a <strong>prezzi competitivi</strong>. Trovi marchi di riferimento come <strong>Hill&rsquo;s</strong>, <strong>Royal Canin</strong>, <strong>Specific</strong>, <strong>Purina Pro Plan</strong>, e formule veterinarie per esigenze specifiche (reni, vie urinarie, sovrappeso, ecc.). Approfitta anche delle <strong>offerte a tempo e dei formati convenienza</strong>.</p>
 <p><strong>Consiglio:</strong> <a href="https://www.dogtore.it/newsletter/inscription/">iscriviti alla newsletter Dogtore.it</a> per ricevere sconti esclusivi e promozioni periodiche.</p>
@@ -532,7 +561,7 @@ aside{position:sticky;top:16px}
 </ul>
 <p>Evita invece gli alimenti acidificanti o troppo poveri di potassio (utilizzati nelle gamme per limitare la formazione di alcuni calcoli urinari), controindicati in caso di insufficienza renale.</p>
 <p><strong>Per maggiore informazioni leggi il nostro articolo presto disponibile sul nostro blog: </strong>Come scegliere il giusto alimento 'renal' per un gatto con insufficienza renale ?</p>
-</div>
+<div class="bn bn-blue"><div class="bn-txt"><h4>Il tuo gatto ha bisogno di una dieta veterinaria ?</h4><p>Insufficienza renale, diabete, calcoli urinari : chiedi consiglio ai nostri veterinari, rispondono via e-mail dal lunedì al venerdì.</p></div><div class="bn-cta"><a class="cta-o" href="https://www.dogtore.it/gatto/integratori-alimentari-gatto-parafarmacia/insufficienza-renale-gatto.html">Prodotti insufficienza renale</a><a class="cta-w" href="#">Contatta un veterinario</a></div></div></div>
       <div class="author-box">
         <div class="ph">TV</div>
         <div><div class="role">Scritto e verificato da</div><h4>Il Team Veterinario del gruppo La Compagnie des Animaux</h4>

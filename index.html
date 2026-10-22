@@ -188,6 +188,21 @@ footer a{color:#fff;display:block;font-weight:300;line-height:1.9}
   .reass .wrap,footer .wrap{grid-template-columns:1fr}
   .note{display:none}
 }
+
+.offers{padding:10px 0 44px}
+.offers .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.of{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:22px 22px;color:#fff;min-height:170px}
+.of-k{font-size:12px;font-weight:700;text-transform:uppercase}
+.of h3{font-size:22px;font-weight:800;line-height:1.2;margin:2px 0 4px}
+.of p{font-size:13px;font-weight:300;margin-bottom:14px}
+.of b{font-size:54px;font-weight:800;line-height:1}
+.of-navy{background:var(--navy)}.of-navy .of-k{color:#9FC6E4}.of-navy b{color:var(--orange)}
+.of-orange{background:var(--orange)}.of-orange b{color:#fff;opacity:.9}
+.of-ice{background:var(--ice);color:var(--text);border-left:5px solid var(--blue)}.of-ice .of-k{color:var(--orange)}.of-ice h3{color:var(--title)}
+.cta-o,.cta-w{display:inline-block;font-size:13px;font-weight:700;text-transform:uppercase;padding:9px 16px}
+.cta-o{background:var(--orange);color:#fff}.cta-w{background:#fff;color:var(--navy)}
+.block-cta{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:var(--ice);padding:14px 18px;margin-top:18px;font-size:14px;font-weight:500}
+@media (max-width:1100px){.offers .wrap{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -280,6 +295,11 @@ footer a{color:#fff;display:block;font-weight:300;line-height:1.9}
   </div>
 </div></section>
 
+<section class="offers"><div class="wrap">
+  <a class="of of-navy" href="https://www.dogtore.it/marketing-com/pass-tranquillita.html"><div><div class="of-k">Abbonamento Pass'Tranquillità</div><h3>Risparmia fino al 15%</h3><p>sul cibo e i prodotti del tuo animale</p><span class="cta-o">Scopri il Pass</span></div><b>-15%</b></a>
+  <a class="of of-orange" href="https://www.dogtore.it/newsletter/inscription/"><div><div class="of-k">Offerta di benvenuto</div><h3>-5% sul primo ordine</h3><p>e i consigli dei veterinari ogni mese</p><span class="cta-w">Iscriviti</span></div><b>-5%</b></a>
+  <a class="of of-ice" href="https://www.dogtore.it/promozioni-prodotti.html"><div><div class="of-k">Promozioni</div><h3>Le offerte del momento</h3><p>per cani, gatti, cavalli e roditori</p><span class="cta-o">Acquista ora</span></div></a>
+</div></section>
 <section class="sec ice"><div class="wrap">
   <h2 class="sec-title">I nostri veterinari</h2>
   <p class="sec-sub">Chi scrive e verifica le guide del blog</p>
@@ -308,6 +328,7 @@ footer a{color:#fff;display:block;font-weight:300;line-height:1.9}
       <a class="card" data-t="alimentazione salute" href="https://www.dogtore.it/allergia-alimentare-cane-sintomi-intolleranza-diagnosi"><div class="img" style="background-image:url(https://www.dogtore.it/media/.renditions/wysiwyg/Dogtore_IT/Allergia_alimentare_nel_cane_consigli.jpg)"><span class="t">Alimentazione</span></div><div class="body"><h3>Allergia alimentare nel cane : sintomi e crocchette ipoallergeniche</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div><div class="dt"><span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Aggiornato il 9 giu 2026</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>7 min di lettura</span></div></div></a>
       <a class="card" data-t="salute" href="https://www.dogtore.it/uso-del-cannabidiolo-nei-cani"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/Benefici_del_CBD_per_i_cani.jpg)"><span class="t">Benessere naturale</span></div><div class="body"><h3>Benefici del CBD nei cani : guida e feedback di esperti veterinari</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div><div class="dt"><span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Aggiornato il 29 apr 2026</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>10 min di lettura</span></div></div></a>
     </div>
+    <div class="block-cta"><span>Tutto per il tuo cane : alimentazione, antiparassitari, integratori</span><a class="cta-o" href="https://www.dogtore.it/cane.html">Acquista per il cane</a></div>
   </div>
 
   <div class="block" data-block="gatto">
@@ -323,6 +344,7 @@ footer a{color:#fff;display:block;font-weight:300;line-height:1.9}
       <a class="card" data-t="accessori" href="https://www.dogtore.it/accessori-smart-gatto"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/Accessori-smart-gatti.jpg)"><span class="t">Accessori</span></div><div class="body"><h3>Accessori smart e tech per gatti : migliori gadget e consigli</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div><div class="dt"><span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Aggiornato il 10 dic 2025</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>11 min di lettura</span></div></div></a>
       <a class="card" data-t="alimentazione" href="https://www.dogtore.it/dieta-barf-per-cani-gatti-cose-e-come-funziona"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/La_dieta_BARF.jpg)"><span class="t">Alimentazione</span></div><div class="body"><h3>Dieta BARF per cani e gatti : cos'è, benefici e rischi</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div><div class="dt"><span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Aggiornato il 17 lug 2025</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>10 min di lettura</span></div></div></a>
     </div>
+    <div class="block-cta"><span>Crocchette, paté e cure veterinarie per il tuo gatto</span><a class="cta-o" href="https://www.dogtore.it/gatto.html">Acquista per il gatto</a></div>
   </div>
 
   <div class="block" data-block="cavallo">
@@ -337,6 +359,7 @@ footer a{color:#fff;display:block;font-weight:300;line-height:1.9}
       <a class="card" data-t="prevenzione" href="https://www.dogtore.it/individuare-e-gestire-un-colpo-di-freddo-nei-cavalli"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/colpo_di_freddo_cavallo.png)"><span class="t">Prevenzione</span></div><div class="body"><h3>Il colpo di freddo nei cavalli</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div><div class="dt"><span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Aggiornato il 24 gen 2024</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>10 min di lettura</span></div></div></a>
       <a class="card" data-t="prevenzione" href="https://www.dogtore.it/colpo-di-calore-nei-cavalli"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/malattia_animale_3_.png)"><span class="t">Prevenzione</span></div><div class="body"><h3>Colpo di calore nel cavallo : cause, sintomi e soluzioni</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div><div class="dt"><span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Aggiornato il 31 ott 2024</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>5 min di lettura</span></div></div></a>
     </div>
+    <div class="block-cta"><span>Integratori, antiparassitari e cura del cavallo</span><a class="cta-o" href="https://www.dogtore.it/cavalli.html">Acquista per il cavallo</a></div>
   </div>
 
   <div class="block" data-block="roditori">
