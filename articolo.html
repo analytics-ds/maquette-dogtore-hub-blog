@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Articolo Dogtore maquette</title>
+<link rel="stylesheet" href="https://use.typekit.net/thc2gzz.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#578BB2;       /* bleu principal : nav, H1, liens */
+  --navy:#395B75;       /* top bar, footer, BRAND */
+  --sky:#4DAAE9;        /* onglet BLOG actif */
+  --title:#1660A7;      /* H2 des guides */
+  --orange:#F28E2E;     /* CTA ACQUISTA ORA, prix */
+  --ice:#E8F2F9;        /* bandeau snack */
+  --ice2:#DDE8F0;
+  --grey-bg:#F1F1F1;
+  --line:#D0D5D5;
+  --text:#282A2B;
+  --muted:#646464;
+  --white:#fff;
+  --font:museo-sans-rounded,"Nunito","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);color:var(--text);background:var(--white);font-size:16px;line-height:1.5;font-weight:400}
+a{color:var(--blue);text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px}
+
+/* Top bar */
+.topbar{background:var(--navy);color:#fff;font-size:12px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:30px}
+.topbar a{color:#fff;margin-right:14px}
+.topbar svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:1.6}
+
+/* Header */
+.header .wrap{display:flex;align-items:center;gap:24px;height:66px}
+.logo img{height:40px;width:auto}
+.search-top{flex:1;max-width:340px;margin-left:auto;display:flex;border:1px solid #C0C0C0;border-radius:2px;height:38px}
+.search-top input{flex:1;border:0;padding:0 12px;font:inherit;font-size:14px;outline:0}
+.search-top button{border:0;background:none;padding:0 12px;cursor:pointer}
+.btn-out{border:1px solid var(--blue);color:var(--blue);background:#fff;padding:8px 46px;font-weight:500;font-size:15px}
+.btn-cart{background:var(--blue);color:#fff;display:flex;align-items:center;gap:14px;padding:6px 10px 6px 14px;font-size:14px}
+.btn-cart .qty{background:#fff;color:var(--blue);border-radius:50%;width:22px;height:22px;display:grid;place-items:center;font-size:12px}
+
+/* Nav */
+.nav{background:var(--blue)}
+.nav ul{list-style:none;display:flex;justify-content:center;max-width:1280px;margin:0 auto;overflow-x:auto}
+.nav li a{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;color:#fff;font-weight:700;font-size:13px;text-transform:uppercase;padding:10px 12px 9px;height:92px;white-space:nowrap}
+.nav li a .ic{width:59px;height:46px;background-size:cover;background-repeat:no-repeat;background-position:0 0}
+.nav li.brand a{background:var(--navy);justify-content:center;padding:0 22px}
+.nav li.blog a{background:var(--sky);justify-content:center;padding:0 22px}
+.snack{background:var(--ice);text-align:center;font-size:14px;padding:12px 16px}
+.snack a{text-decoration:underline}
+
+/* Breadcrumb */
+.crumbs{font-size:12px;color:var(--muted);padding:16px 0 0}
+.crumbs a{color:var(--muted)}
+
+/* Hero */
+.hero{padding:18px 0 40px}
+.h1-band{display:inline;background:var(--blue);color:#fff;font-weight:700;font-size:26px;text-transform:uppercase;line-height:1.55;padding:2px 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:start;margin-top:4px}
+.hero p.lead{margin:18px 0 22px;font-size:17px;font-weight:300;max-width:560px}
+.hero p.lead strong{font-weight:700}
+.bigsearch{display:flex;border:2px solid var(--blue);background:#fff;height:56px;max-width:580px}
+.bigsearch input{flex:1;border:0;padding:0 18px;font:inherit;font-size:16px;outline:0;font-weight:300}
+.bigsearch button{background:var(--blue);border:0;color:#fff;font:inherit;font-weight:700;text-transform:uppercase;font-size:14px;padding:0 22px;cursor:pointer;display:flex;align-items:center;gap:8px}
+.bigsearch svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;font-size:13px}
+.chips span{color:var(--muted);margin-right:2px;align-self:center}
+.chip{border:1px solid var(--blue);color:var(--blue);padding:4px 12px;border-radius:30px;background:#fff;cursor:pointer;font:inherit;font-size:13px}
+.chip:hover,.chip.on{background:var(--blue);color:#fff}
+.trust{display:flex;gap:28px;margin-top:28px;flex-wrap:wrap}
+.trust div{display:flex;align-items:center;gap:10px;font-size:13px;line-height:1.3}
+.trust b{display:block;font-size:22px;color:var(--title);font-weight:800}
+.trust .vet{width:42px;height:42px;border-radius:50%;background:var(--ice);display:grid;place-items:center}
+.trust svg{width:22px;height:22px;stroke:var(--blue);fill:none;stroke-width:1.8}
+
+.feat{position:relative;display:block;color:var(--text);border:1px solid var(--ice2);background:#fff}
+.feat .img{aspect-ratio:16/9;background:var(--ice) center/cover no-repeat}
+.feat .tag{position:absolute;top:14px;left:14px;background:var(--orange);color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;padding:4px 10px}
+.feat .body{padding:18px 20px 20px}
+.feat h2{font-size:21px;line-height:1.3;color:var(--title);font-weight:700;margin:6px 0 8px}
+.feat p{font-size:14px;color:var(--muted);font-weight:300}
+.meta{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin-top:12px}
+.meta .av{width:24px;height:24px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:10px;font-weight:700}
+.kicker{font-size:12px;font-weight:700;text-transform:uppercase;color:var(--blue);letter-spacing:.3px}
+
+/* Section titles, style "I NOSTRI PROPRI BRAND" */
+.sec{padding:44px 0}
+.sec.ice{background:var(--ice)}
+.sec-title{text-align:center;font-size:26px;font-weight:300;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.sec-sub{text-align:center;color:var(--muted);font-weight:300;font-size:15px;margin-bottom:28px}
+
+/* Species tiles */
+.species{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.sp{background:#fff;border:1px solid var(--ice2);display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px 10px 16px;color:var(--text);font-weight:700;text-transform:uppercase;font-size:14px;cursor:pointer;transition:.15s}
+.sp .circle{width:76px;height:76px;border-radius:50%;background:var(--blue);display:grid;place-items:center}
+.sp .circle i{width:52px;height:41px;background-size:cover;background-repeat:no-repeat;background-position:0 0}
+.sp small{font-weight:300;text-transform:none;color:var(--muted);font-size:12px}
+.sp:hover,.sp.on{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue) inset}
+
+/* Themes */
+.themes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.th{position:relative;display:flex;align-items:flex-end;min-height:190px;color:#fff;background:var(--navy) center/cover no-repeat;overflow:hidden}
+.th::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(57,91,117,.05) 25%,rgba(57,91,117,.92) 100%)}
+.th .in{position:relative;padding:18px 20px}
+.th h3{font-size:20px;font-weight:700;text-transform:uppercase;line-height:1.2}
+.th p{font-size:13px;font-weight:300;margin-top:4px;opacity:.95}
+.th .go{display:inline-block;margin-top:10px;background:var(--orange);color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;padding:5px 12px}
+.th.big{grid-row:span 2;min-height:398px}
+.th.big h3{font-size:26px}
+
+/* Authors */
+.authors{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.au{background:#fff;border:1px solid var(--ice2);padding:24px 18px 20px;text-align:center}
+.au .ph{width:92px;height:92px;border-radius:50%;margin:0 auto 12px;background:var(--ice);border:3px solid var(--blue);display:grid;place-items:center;font-size:28px;font-weight:800;color:var(--blue)}
+.au h4{font-size:16px;font-weight:700}
+.au .role{font-size:12px;color:var(--blue);font-weight:700;text-transform:uppercase;margin:2px 0 8px}
+.au p{font-size:13px;color:var(--muted);font-weight:300}
+.au a{display:inline-block;margin-top:12px;font-size:13px;font-weight:500;border:1px solid var(--blue);padding:5px 14px}
+.au a:hover{background:var(--blue);color:#fff}
+
+/* Species blocks */
+.block{padding:40px 0 10px}
+.block-head{display:flex;align-items:center;gap:14px;border-bottom:2px solid var(--blue);padding-bottom:10px;margin-bottom:18px;flex-wrap:wrap}
+.block-head .circle{width:46px;height:46px;border-radius:50%;background:var(--blue);display:grid;place-items:center}
+.block-head .circle i{width:34px;height:27px;background-size:cover;background-repeat:no-repeat;background-position:0 0}
+.block-head h2{font-size:22px;color:var(--title);text-transform:uppercase;font-weight:700}
+.block-head .filters{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+.block-head .all{font-size:14px;font-weight:500;margin-left:10px;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{display:flex;flex-direction:column;color:var(--text);background:#fff;border:1px solid var(--ice2);transition:.15s}
+.card:hover{border-color:var(--blue);box-shadow:0 4px 14px rgba(57,91,117,.15)}
+.card .img{aspect-ratio:3/2;background:var(--ice) center/cover no-repeat;position:relative}
+.card .img .t{position:absolute;left:0;bottom:0;background:var(--blue);color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;padding:3px 9px}
+.card .body{padding:12px 14px 14px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:15px;line-height:1.35;font-weight:700;color:var(--text)}
+.card:hover h3{color:var(--title)}
+.card .meta{margin-top:auto;padding-top:12px}
+.dt{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--muted);margin-top:8px;padding-top:8px;border-top:1px solid var(--ice2)}
+.dt span{display:inline-flex;align-items:center;gap:5px}
+.dt svg{width:14px;height:14px;stroke:var(--blue);fill:none;stroke-width:2}
+.card.hide{display:none}
+.empty{display:none;text-align:center;color:var(--muted);padding:30px 0}
+
+/* Help band + reassurance */
+.help{background:var(--blue);color:#fff;padding:30px 0;margin-top:46px}
+.help .wrap{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.help h3{font-size:22px;text-transform:uppercase;font-weight:700}
+.help p{font-weight:300;font-size:15px;max-width:720px}
+.btn-orange{background:var(--orange);color:#fff;font-weight:700;text-transform:uppercase;font-size:14px;padding:12px 22px;margin-left:auto;white-space:nowrap}
+.reass{background:var(--ice)}
+.reass .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;padding:26px 20px}
+.reass b{display:block;font-size:13px;text-transform:uppercase;color:var(--navy)}
+.reass span{font-size:12px;font-weight:300}
+
+footer{background:var(--navy);color:#fff;font-size:13px}
+footer .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:34px 20px}
+footer h5{font-size:13px;text-transform:uppercase;margin-bottom:10px}
+footer a{color:#fff;display:block;font-weight:300;line-height:1.9}
+.legal{background:var(--blue);text-align:center;font-size:12px;padding:10px;color:#fff}
+
+.note{position:fixed;right:14px;bottom:14px;background:#fff;border:1px solid var(--orange);color:var(--text);font-size:12px;padding:8px 12px;max-width:260px;box-shadow:0 4px 12px rgba(0,0,0,.12);z-index:9}
+.note b{color:var(--orange)}
+
+@media (max-width:1100px){
+  .hero-grid{grid-template-columns:1fr}
+  .species{grid-template-columns:repeat(3,1fr)}
+  .grid,.authors{grid-template-columns:repeat(2,1fr)}
+  .themes{grid-template-columns:1fr 1fr}
+  .th.big{grid-row:auto;min-height:220px}
+  .reass .wrap,footer .wrap{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .topbar .links{display:none}
+  .search-top,.btn-out{display:none}
+  .nav ul{justify-content:flex-start}
+  .h1-band{font-size:21px}
+  .species{grid-template-columns:repeat(2,1fr)}
+  .grid,.authors,.themes{grid-template-columns:1fr}
+  .bigsearch button span{display:none}
+  .block-head .filters{margin-left:0;width:100%}
+  .reass .wrap,footer .wrap{grid-template-columns:1fr}
+  .note{display:none}
+}
+
+.art .crumbs{padding-bottom:14px}
+.art-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:44px;align-items:start}
+.art h1{margin:6px 0 14px}
+.art-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;font-size:13px;color:var(--muted);padding:12px 0;border-top:1px solid var(--ice2);border-bottom:1px solid var(--ice2);margin-bottom:20px}
+.art-meta>span{display:inline-flex;align-items:center;gap:6px}
+.art-meta svg{width:16px;height:16px;stroke:var(--blue);fill:none;stroke-width:2}
+.art-meta .who{gap:10px;line-height:1.25}
+.art-meta .who b{color:var(--text)}
+.art-meta .av{width:36px;height:36px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700}
+.hero-img{width:100%;margin-bottom:24px}
+.content{font-size:16px;font-weight:300;line-height:1.7}
+.content p,.content ul,.content ol,.content table{margin:0 0 14px}
+.content ul,.content ol{padding-left:22px}
+.content strong,.content b{font-weight:700}
+.content h2{color:var(--title);font-size:24px;font-weight:700;margin:34px 0 12px;line-height:1.3}
+.content h3{font-size:18px;font-weight:500;margin:22px 0 8px}
+.content img{margin:10px auto;height:auto}
+.content a{text-decoration:underline}
+.content table{border-collapse:collapse;width:100%;font-size:14px}
+.content td,.content th{border:1px solid var(--line);padding:8px}
+.toc{background:var(--ice);padding:16px 20px;margin-bottom:20px}
+.toc summary{font-weight:700;text-transform:uppercase;color:var(--title);cursor:pointer;font-size:18px}
+.toc ul{margin:10px 0 0;font-size:14px;line-height:1.8}
+.toc a{text-decoration:none}
+.author-box{display:flex;gap:18px;align-items:flex-start;background:var(--ice);padding:22px;margin-top:30px}
+.author-box .ph{flex:none;width:76px;height:76px;border-radius:50%;background:#fff;border:3px solid var(--blue);display:grid;place-items:center;font-size:24px;font-weight:800;color:var(--blue)}
+.author-box .role{font-size:12px;color:var(--blue);font-weight:700;text-transform:uppercase}
+.author-box h4{font-size:17px;margin:2px 0 6px}
+.author-box p{font-size:14px;font-weight:300;color:var(--muted);margin-bottom:8px}
+.author-box a{font-size:14px;font-weight:500}
+aside{position:sticky;top:16px}
+.push{border:1px solid var(--ice2);background:#fff}
+.push-h{background:var(--blue);color:#fff;font-weight:700;text-transform:uppercase;font-size:13px;padding:9px 14px}
+.push-main{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:14px 16px 6px;color:var(--text)}
+.push-main img{width:170px;height:170px;object-fit:contain}
+.push-main .promo{position:absolute;top:12px;left:12px;background:var(--orange);color:#fff;font-size:12px;font-weight:700;padding:3px 8px}
+.pname{font-size:14px;font-weight:500;line-height:1.35;margin-top:6px}
+.price{margin-top:6px;font-size:13px;color:#A7A7A7}
+.price b{font-size:20px;color:var(--orange);font-weight:700}
+.kg{font-size:11px;color:var(--muted)}
+.btn-cart-add{display:block;margin:8px 16px 14px;background:var(--blue);color:#fff;text-align:center;font-weight:500;padding:10px}
+.push-alt{border-top:1px solid var(--ice2)}
+.push-alt a{display:flex;gap:10px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--ice2);color:var(--text);font-size:12px;line-height:1.3}
+.push-alt img{width:52px;height:52px;object-fit:contain;flex:none}
+.push-alt b{display:block;color:var(--orange);font-size:14px;margin-top:3px}
+.push-all{display:block;text-align:center;font-size:13px;font-weight:500;padding:10px}
+.related{background:var(--ice);padding:44px 0;margin-top:46px}
+.related .help{margin-top:0}
+@media (max-width:1100px){.art-grid{grid-template-columns:1fr}aside{position:static;order:-1}.push{display:grid;grid-template-columns:1fr 1fr}.push-h{grid-column:1/-1}.push-alt,.push-all{grid-column:1/-1}}
+@media (max-width:640px){.push{display:block}.art-meta{gap:8px 14px}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <div class="links"><a href="#">Contatto</a><a href="#">Fedeltà</a><a href="#">Consigli</a><a href="#">Fai la differenza</a><a href="#">Tracking consegna</a></div>
+  <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+</div></div>
+
+<header class="header"><div class="wrap">
+  <a class="logo" href="https://www.dogtore.it/"><img src="https://www.dogtore.it/media/logo/stores/15/logo-it.png" alt="dogtore.it"></a>
+  <form class="search-top" onsubmit="return false"><input placeholder="Ricerca..."><button aria-label="Cerca"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#282A2B" stroke-width="2.4"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button></form>
+  <a class="btn-out" href="#">ACCEDI</a>
+  <a class="btn-cart" href="#"><svg width="22" height="18" viewBox="0 0 24 20" fill="#fff"><path d="M0 1h4l3 11h12l3-8H6.5L6 2.5"/><circle cx="9" cy="17" r="2"/><circle cx="18" cy="17" r="2"/></svg>0.00 €<span class="qty">0</span></a>
+</div></header>
+
+<nav class="nav"><ul>
+  <li><a href="https://www.dogtore.it/gatto.html"><i class="ic" style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Chat.png)"></i>Gatto</a></li>
+  <li><a href="https://www.dogtore.it/cane.html"><i class="ic" style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Chien.png)"></i>Cane</a></li>
+  <li><a href="https://www.dogtore.it/roditori-co.html"><i class="ic" style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Rongeur-2.png)"></i>Roditori &amp; Co</a></li>
+  <li><a href="https://www.dogtore.it/cavalli.html"><i class="ic" style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Cheval.png)"></i>Cavalli</a></li>
+  <li><a href="#"><i class="ic" style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Animaux-de-la-ferme.png)"></i>Animali della fattoria</a></li>
+  <li><a href="https://www.dogtore.it/pesci.html"><i class="ic" style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Poisson.png)"></i>Pesci</a></li>
+  <li><a href="#"><i class="ic" style="background-image:url(https://www.dogtore.it/media/catalog/category/menu-Autres2.png)"></i>Altri</a></li>
+  <li class="brand"><a href="#">Brand</a></li>
+  <li class="blog"><a href="index.html">Blog</a></li>
+</ul></nav>
+<div class="snack">Una selezione unica di <b>snack</b> per <a href="#">cani</a> &amp; <a href="#">gatti</a> : più scelta, più gusto</div>
+
+<main class="art">
+<div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &gt; <a href="index.html">Blog</a> &gt; <a href="index.html#guide">Gatto</a> &gt; Alimentazione</div>
+  <div class="art-grid">
+    <article>
+      <div class="kicker">Gatto · Alimentazione</div>
+      <h1><span class="h1-band">Cibo per gatti : guida alla scelta dell'alimentazione ideale per il tuo felino</span></h1>
+      <div class="art-meta">
+        <span class="who"><span class="av">TV</span><span><b>Team Veterinario</b><br>La Compagnie des Animaux</span></span>
+        <span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Aggiornato il 28 lug 2025</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>19 min di lettura</span>
+      </div>
+      <img class="hero-img" src="https://www.dogtore.it/media/wysiwyg/Dogtore_IT/gatti-mangiano-cibo-per-gatti.jpg" alt="Cibo per gatti: guida all'alimentazione ideale illustrata da gatti che mangiano da ciotole">
+      <div class="content">
+
+<details class="toc" open><summary>Sommario</summary><ul>
+<li><a href="#mcetoc_1irsa8cb01">Cosa mangiano i gatti ?</a>
+<ul>
+<li><a href="#mcetoc_1irsa8cb02">Una dieta bilanciata !</a></li>
+<li><a href="#mcetoc_1irsa8cb03">Proteine &#8203;&#8203;come nutriente principale</a></li>
+<li><a href="#mcetoc_1irsa8cb04">Rispettare le esigenze nutrizionali del gatto</a></li>
+<li><a href="#mcetoc_1irsa8cb05">Non dimenticare l&rsquo;idratazione !</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1irsa8cb06">Quali sono i bisogni nutrizionali del gatto ?</a>
+<ul>
+<li><a href="#mcetoc_1irsa8cb07">Fabbisogno proteico</a></li>
+<li><a href="#mcetoc_1irsa8cb08">Fabbisogno di aminoacidi</a></li>
+<li><a href="#mcetoc_1irsa8cb09">Fabbisogno di carboidrati e lipidi</a></li>
+<li><a href="#mcetoc_1irsa8cb0a">Fabbisogno vitaminico</a></li>
+<li><a href="#mcetoc_1irsa8cb0b">Fabbisogno di sali minerali</a></li>
+<li><a href="#mcetoc_1irsa8cb0c">Fabbisogni di fibre e acidi grassi essenziali</a></li>
+<li><a href="#mcetoc_1irsa8cb0d">Fabbisogno di acqua</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1irsa8cb0e">Pat&eacute; o crocchette per gatto: come scegliere ?</a>
+<ul>
+<li><a href="#mcetoc_1irsa8cb0f">I croccantini per gatto</a></li>
+<li><a href="#mcetoc_1irsa8cb0g">Il cibo umido per gatto</a></li>
+<li><a href="#mcetoc_1irsa8cb0h">L&rsquo;alimentazione mista per gatto</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1irsa8cb0i">Il cibo fatto in casa &egrave; migliore ?</a></li>
+<li><a href="#mcetoc_1irsa8cb0j">Come leggere l&rsquo;etichetta delle crocchette per gatto ?</a>
+<ul>
+<li><a href="#mcetoc_1irsa8cb0k">L'elenco degli ingredienti</a></li>
+<li><a href="#mcetoc_1irsa8cb0l">La composizione del cibo secco per gatti</a></li>
+<li><a href="#mcetoc_1irsa8cb0m">Nutrienti di qualit&agrave;</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1irsa8cb0n">Si possono dare gli avanzi della tavola al gatto ?</a></li>
+<li><a href="#mcetoc_1irsa8cb0o">Quali alimenti sono pericolosi per i gatti ?</a></li>
+<li><a href="#mcetoc_1irsa8cb0p">Quale quantit&agrave; di crocchette dare al tuo gatto ?</a></li>
+<li><a href="#mcetoc_1irsa8cb0q">Quale quantit&agrave; di pat&eacute; dare al tuo gatto ?</a></li>
+<li><a href="#mcetoc_1irsa8cb0r">Quando dovrebbe mangiare il tuo gatto ?</a></li>
+<li><a href="#mcetoc_1irsa8cb0t">Dove mettere la ciotola del gatto ?</a></li>
+<li><a href="#mcetoc_1irsa8cb0u">Come nutrire un gatto d&rsquo;appartamento ?</a></li>
+<li><a href="#mcetoc_1irsa8cb0v">Come nutrire il mio gatto anziano ? Qual &egrave; il miglior cibo per lui ?</a></li>
+<li><a href="#mcetoc_1irsa8cb010">Come nutrire il tuo gatto sterilizzato ?</a></li>
+<li><a href="#mcetoc_1irsa8cb011">Quanta acqua deve bere un gatto al giorno ?</a></li>
+<li><a href="#mcetoc_1irsa8cb012">Perch&eacute; i gatti hanno tendenza a non bere (abbastanza) ?</a></li>
+<li><a href="#mcetoc_1irsa8cb013">Si pu&ograve; dare il latte al gatto ?</a></li>
+<li><a href="#mcetoc_1irsa8cb014">FAQ</a>
+<ul>
+<li><a href="#mcetoc_1irsa8cb015">Come risparmiare sul cibo per gatti senza rinunciare alla qualit&agrave; ?</a></li>
+<li><a href="#mcetoc_1irsa8cb016">Come conservare il cibo per gatti ?</a></li>
+<li><a href="#mcetoc_1irsa8cb017">Quale distributore di cibo per gatti scegliere ?</a></li>
+<li><a href="#mcetoc_1irsa8cb018">Qual &egrave; il migliore cibo renal per gatti ?</a></li>
+</ul>
+</li>
+</ul></details><h2 id="mcetoc_1irsa8cb01">Cosa mangiano i gatti ?</h2>
+<h3 id="mcetoc_1irsa8cb02">Una dieta bilanciata !</h3>
+<p>Per restare in salute, il gatto ha bisogno di un&rsquo;<a href="https://www.dogtore.it/gatto/alimentazione-gatto.html">alimentazione equilibrata, adatta alle sue <strong>specifiche esigenze</strong></a> e <strong>fornita nella giusta quantit&agrave;</strong>. Il suo intestino &egrave; piuttosto corto (circa 1 metro per il tenue e 20-40 cm per il crasso), caratteristica tipica dei predatori di piccole prede. Per questo motivo, deve <strong>mangiare spesso ma in piccole porzioni</strong>, tra i 10 e i 16 pasti al giorno.</p>
+<h3 id="mcetoc_1irsa8cb03">Proteine &#8203;&#8203;come nutriente principale</h3>
+<p>Il gatto &egrave; un <strong>carnivoro stretto</strong>: le proteine animali devono rappresentare il nutriente principale della sua dieta. <strong>Il suo organismo non &egrave; in grado di sintetizzare la taurina</strong>, un amminoacido essenziale per il buon funzionamento muscolare, la cui carenza pu&ograve; causare gravi conseguenze (come insufficienza cardiaca o cecit&agrave;). La <strong>taurina si trova solo nelle proteine animali</strong>. Il gatto, quindi, <strong>non pu&ograve; essere vegetariano</strong>.</p>
+<h3 id="mcetoc_1irsa8cb04">Rispettare le esigenze nutrizionali del gatto</h3>
+<p>Che si tratti di alimentazione industriale o casalinga, sotto forma di cibo secco (crocchette) o umido (pat&eacute;) o di dieta mista (cibo secco + cibo umido), &egrave; fondamentale che&nbsp;<a href="https://www.dogtore.it/gatto/alimentazione-gatto.html">l&rsquo;alimentazione del gatto</a> <strong>rispetti i suoi fabbisogni in proteine, carboidrati, lipidi, vitamine e sali minerali</strong>. La dieta deve essere adattata in base all&rsquo;et&agrave;, alla condizione fisiologica (sterilizzato o meno) e allo stile di vita (in casa o all&rsquo;aperto).</p>
+<p>Alcuni gatti con patologie come obesit&agrave;, diabete o insufficienza renale possono necessitare di una<a href="https://www.dogtore.it/gatto/alimentazione-gatto/crocchette-gatto/crocchette-prescrizione-veterinaria-gatto.html"> dieta specifica prescritta dal veterinario</a> come parte della terapia.</p>
+<h3 id="mcetoc_1irsa8cb05"><strong>Non dimenticare l&rsquo;idratazione !</strong></h3>
+<p>L&rsquo;acqua &egrave; fondamentale per mantenere un buono stato di idratazione e contribuire al benessere generale del gatto.</p>
+<h2 id="mcetoc_1irsa8cb06">Quali sono i bisogni nutrizionali del gatto ?</h2>
+<p><img src="https://www.dogtore.it/media/wysiwyg/Dogtore_IT/gatto-bisogni-nutrizionali-ciotola.jpg" alt="Bisogni nutrizionali del gatto: gatto che mangia da una ciotola" loading="lazy"></p>
+<h3 id="mcetoc_1irsa8cb07">Fabbisogno proteico</h3>
+<p>Le proteine devono rappresentare&nbsp;<strong>tra il 30% e il 40% della razione alimentare quotidiana</strong>. Un gatto adulto di 5 kg necessita di circa 26 g di proteine al giorno, preferibilmente di alta qualit&agrave; e di <strong>origine animale</strong>.</p>
+<h3 id="mcetoc_1irsa8cb08">Fabbisogno di aminoacidi</h3>
+<p>Il gatto non &egrave; in grado di sintetizzare la taurina, un amminoacido essenziale per la funzione muscolare e la sopravvivenza. Deve quindi assumerla attraverso l&rsquo;alimentazione.<strong> La taurina &egrave; presente esclusivamente nelle proteine animali</strong>, confermando che il gatto &egrave; un carnivoro obbligato.</p>
+<h3 id="mcetoc_1irsa8cb09">Fabbisogno di carboidrati e lipidi</h3>
+<p>I carboidrati<strong> non dovrebbero superare il 45% della sostanza secca</strong> della dieta, e <strong>i lipidi non dovrebbero superare l&rsquo;11%</strong>. Quantit&agrave; eccessive possono favorire sovrappeso, obesit&agrave; o diabete.</p>
+<h3 id="mcetoc_1irsa8cb0a">Fabbisogno vitaminico</h3>
+<p>L&rsquo;alimentazione del gatto&nbsp;&nbsp;deve fornire <strong>vitamine A, B, D, E, K e H</strong> in quantit&agrave; adeguate (n&eacute; troppo poche, n&eacute; in eccesso) per la sua buona salute. Il gatto non pu&ograve; trasformare i caroteni vegetali ( nelle verdure verdi o nelle carote) in vitamina A, che va quindi assunta da fonti animali (come il fegato) o sintetiche. Pu&ograve; invece sintetizzare la vitamina C e la vitamina D attraverso la pelle (grazie all'azione dei raggi UV solari), leccandosi dopo l&rsquo;esposizione al sole.</p>
+<h3 id="mcetoc_1irsa8cb0b">Fabbisogno di sali minerali</h3>
+<p>La dieta del gatto adulto deve contenere sali minerali &ndash; come <strong>calcio, fosforo, potassio, rame, zinco e magnesio</strong> &ndash; devono essere presenti in proporzioni bilanciate. Carenze o eccessi possono compromettere la salute generale del gatto.</p>
+<h3 id="mcetoc_1irsa8cb0c">Fabbisogni di fibre e acidi grassi essenziali</h3>
+<p>Le fibre <strong>favoriscono la digestione</strong>. Gli acidi grassi essenziali (omega 3 e omega 6) contribuiscono al <strong>benessere generale </strong>e alla <strong>salute del mantello</strong>.</p>
+<h3 id="mcetoc_1irsa8cb0d">Fabbisogno di acqua</h3>
+<p>L&rsquo;acqua &egrave; il nutriente&nbsp;<strong>fondamentale: &egrave;&nbsp; il primo bisogno nutrizionale del gatto</strong>. Deve essere sempre disponibile per garantire una corretta idratazione ed evitare concentrazioni urinarie eccessive, che possono causare calcoli o insufficienza renale.</p>
+<h2 id="mcetoc_1irsa8cb0e">Pat&eacute; o crocchette per gatto: come scegliere ?</h2>
+<p><img src="https://www.dogtore.it/media/wysiwyg/Dogtore_IT/pate-o-crocchette-gatto-piccolo.jpg" alt="Scelta tra pat&eacute; e crocchette: gattino con ciotola di cibo secco" loading="lazy"></p>
+<h3 id="mcetoc_1irsa8cb0f">I croccantini per gatto</h3>
+<p><a href="https://www.dogtore.it/gatto/alimentazione-gatto/crocchette-gatto.html">Le crocchette per gatto</a> sono un alimento secco (con meno del 14% di umidit&agrave;) ideale per consentire al gatto di <strong>nutrirsi pi&ugrave; volte al giorno, in piccole quantit&agrave;</strong>. Il suo apparato digerente, breve e adattato a pasti frequenti: le crocchette si prestano bene a questo tipo di alimentazione. Inoltre, le crocchette aiutano a<strong> mantenere l&rsquo;igiene orale</strong>, contrastando la formazione di tartaro e stimolando la circolazione del sangue nelle gengive. Facili da dosare, devono essere di alta qualit&agrave; e adatte alle esigenze individuali per garantire benessere e salute.</p>
+<h3 id="mcetoc_1irsa8cb0g">Il cibo umido per gatto</h3>
+<p><a href="https://www.dogtore.it/gatto/alimentazione-gatto/pate-gatto.html">Pat&eacute; e bustine</a> per gatto sono alimenti umidi con un contenuto di acqua che pu&ograve; raggiungere il 70-80%. Aiutano a <strong>mantenere una buona idratazione</strong>, fondamentale per<strong> prevenire disturbi urinari</strong> come la formazione di calcoli. Pi&ugrave; appetibili rispetto alle crocchette, sono particolarmente indicati per <strong>gatti convalescenti o con scarso appetito</strong>. Tuttavia, si conservano poco una volta aperti e, se usati come alimento unico, devono essere somministrati in quantit&agrave; maggiori per coprire i fabbisogni nutrizionali giornalieri.</p>
+<h3 id="mcetoc_1irsa8cb0h">L&rsquo;alimentazione mista per gatto</h3>
+<p>Un&rsquo;alimentazione mista consente al gatto di beneficiare dei vantaggi di crocchette e pat&eacute;. In genere, si consiglia di somministrare circa<strong> 2/3 di crocchette e 1/3 di alimento umido</strong> (come pat&eacute; o bustine). La chiave &egrave; trovare il <strong>giusto equilibrio, adattando la razione giornaliera</strong> alle esigenze individuali del gatto: et&agrave;, peso, stato di sterilizzazione, livello di attivit&agrave; fisica e condizioni del mantello sono tutti fattori da considerare per garantire benessere e salute.</p>
+<h2 id="mcetoc_1irsa8cb0i">Il cibo fatto in casa &egrave; migliore ?</h2>
+<p>L&rsquo;alimentazione casalinga, preparata con ingredienti freschi, pu&ograve; essere una buona scelta, ma deve essere&nbsp;<strong>perfettamente bilanciata</strong> per <strong>soddisfare le esigenze nutrizionali specifiche</strong> del gatto. Non &egrave; semplice da gestire: richiede l&rsquo;integrazione con vitamine e sali minerali che l&rsquo;animale non riesce a ricavare da solo. La quantit&agrave; e la composizione della razione devono essere <strong>definite da un nutrizionista veterinario</strong>. Inoltre, va somministrata in <strong>piccoli pasti distribuiti durante la giornata </strong>(una diecina di volte al giorno), rispettando la natura &ldquo;rosicchiatrice&rdquo; del gatto specifica al suo apparato digerente.</p>
+<h2 id="mcetoc_1irsa8cb0j">Come leggere l&rsquo;etichetta delle crocchette per gatto ?</h2>
+<p>Capire le etichette sui sacchetti di crocchette per gatto non &egrave; sempre semplice: le informazioni sono spesso tecniche e poco chiare. Tuttavia, <strong>alcune indicazioni sono obbligatorie per legge e soggette a normativa</strong>.</p>
+<h3 id="mcetoc_1irsa8cb0k">L'elenco degli ingredienti</h3>
+<p>L&rsquo;elenco degli ingredienti &egrave; fondamentale: le materie prime sono indicate in&nbsp;<strong>ordine decrescente</strong> di quantit&agrave;. Attenzione per&ograve; alla forma indicata: ad esempio, un 40% di carne fresca corrisponde a circa il 20% una volta disidratata. <strong>Per valutare correttamente</strong>, &egrave; importante <strong>controllare sempre che la quantit&agrave; di nutrienti corrisponda alla loro forma disidratata.</strong></p>
+<h3 id="mcetoc_1irsa8cb0l">La composizione del cibo secco per gatti</h3>
+<p>Per legge, sull&rsquo;etichetta delle crocchette devono essere indicati: il<strong> tenore in proteine grezze, grassi grezzi, cellulosa grezza, ceneri grezze e gli additivi (come vitamine A, D3, E, &hellip; )</strong>. &Egrave; importante valutare la quantit&agrave; reale degli ingredienti principali, soprattutto <strong>le proteine, che dovrebbero essere il costituente principale delle crocchette</strong>. Purtroppo, molte crocchette economiche contengono <strong>troppi cereali</strong>, poco adatti al metabolismo felino e associati a obesit&agrave; e diabete. <strong>La normativa purtroppo non richiede l&rsquo;indicazione dei carboidrati</strong>, una mancanza significativa per chi cerca alimenti di qualit&agrave;.</p>
+<p>Scopri la nostra <a href="https://www.dogtore.it/alimentazione-senza-cereali-animali.html?specie=gatto">selezione di alimenti per gatto senza cereali qui</a>.</p>
+<h3 id="mcetoc_1irsa8cb0m">Nutrienti di qualit&agrave;</h3>
+<p><strong>I nutrienti presenti nelle crocchette per gatto</strong> devono essere di alta qualit&agrave;. &Egrave; importante fare attenzione alla dicitura <strong>"carne e sottoprodotti di origine animale"</strong>, poich&eacute; la quantit&agrave; effettiva di carne pu&ograve; essere molto ridotta. Le<strong> carni di buona qualit&agrave;</strong>, con un elevato valore biologico (VB=<strong>efficienza con cui l'organismo del gatto sar&agrave; in grado di assorbire le proteine</strong>), sono pi&ugrave; facilmente assimilabili dall&rsquo;organismo del gatto. Per questo motivo, le crocchette di fascia alta, che utilizzano ingredienti migliori, hanno un costo superiore rispetto a quelle economiche, spesso formulate con sottoprodotti.</p>
+<h2 id="mcetoc_1irsa8cb0n">Si possono dare gli avanzi della tavola al gatto ?</h2><p><img src="https://www.dogtore.it/media/wysiwyg/Dogtore_IT/gatto-tavola-cibi-pericolosi.jpg" alt="Gatto a tavola: alcuni cibi umani possono essere nocivi per i gatti" loading="lazy"></p>
+<p>&Egrave; comprensibile voler<strong> condividere qualche avanzo con il proprio gatto</strong>, ma &egrave; sconsigliato. Questo comportamento pu&ograve; incoraggiarlo a "rubare" il cibo e creare cattive abitudini. Se proprio non resisti, offrigli<strong> solo piccoli pezzi di carne o pesce</strong>, <strong>evitando alimenti grassi, salati</strong> (come il tonno in scatola),&nbsp;<strong>zuccherati o speziati</strong>. Questi possono causare sovrappeso (anche obesit&agrave; o diabete), disturbi digestivi (diarrea o flatulenza) o problemi cutanei. <strong>Ricorda</strong> inoltre, se gli dai gli avanzi, di <strong>ridurre la sua razione giornaliera</strong> per evitare squilibri nutrizionali.</p>
+<h2 id="mcetoc_1irsa8cb0o">Quali alimenti sono pericolosi per i gatti ?</h2>
+<p>Alcuni alimenti comuni possono essere molto pericolosi per la salute dei gatti:</p>
+<ul>
+<li><strong>Latticini</strong>: latte, yogurt e formaggi possono causare diarrea, poich&eacute; molti gatti adulti sono intolleranti al lattosio.</li>
+<li><strong>Ossa</strong> (anche cotte): possono scheggiarsi e causare soffocamento o lesioni interne &nbsp;conficcandosi nel tratto respiratorio o digerente.</li>
+<li><strong>Cioccolato</strong>: contiene teobromina e caffeina, sostanze tossiche anche in piccole dosi.</li>
+<li><strong>Uva e uvetta</strong>: possono provocare gravi problemi renali anche in piccolissime quantit&agrave;.</li>
+<li><strong>Frutta secca</strong> (noci, nocciole...): pu&ograve; causare disturbi digestivi.</li>
+<li><strong>Aglio, cipolla e porro</strong>: provocano anemia emolitica, potenzialmente fatale.</li>
+<li><strong>Limone e aceto</strong>: irritano lo stomaco e possono causare vomito.</li>
+<li><strong>Cibi salati</strong>: favoriscono ipertensione e insufficienza renale.</li>
+<li><strong>Avocado</strong>: pu&ograve; causare problemi gastrointestinali e pancreatite.</li>
+<li><strong>Pesce crudo</strong>: contiene un enzima che distrugge la vitamina B1 (tiamina), causando gravi carenze. Quindi evita tartare, sushi o qualsiasi altro piatto che contenga pesce crudo.</li>
+<li><strong>Patate crude e pomodori verdi</strong>: contengono solanina, una sostanza tossica distrutta solo con la cottura e quando i pomodori sono ben maturi.</li>
+<li><strong>Alcol</strong>: assolutamente vietato anche in piccolissime quantit&agrave;.</li>
+</ul>
+<p>Per la salute del tuo gatto, &egrave; sempre meglio consultare il veterinario in caso di dubbi.</p>
+<h2 id="mcetoc_1irsa8cb0p">Quale quantit&agrave; di crocchette dare al tuo gatto ?</h2>
+<p>La quantit&agrave; giornaliera di crocchette da offrire al gatto dipende da:</p>
+<ul>
+<li><strong>Peso e stato fisiologico</strong>: un gatto adulto sterilizzato di 5 kg ha bisogno di circa <strong>275 kcal al giorno</strong> (circa <strong>55 kcal per kg</strong>).</li>
+<li><strong>Calorie delle crocchette</strong>: varia a seconda della marca.</li>
+<li><strong>Razione media per un gatto adulto</strong>: tra <strong>50 e 80 g al giorno</strong>, da adattare secondo la marca dei croccantini e secondo et&agrave;, attivit&agrave; fisica, metabolismo e presenza di eventuali patologie.</li>
+</ul>
+<p>&Egrave; importante consultare l&rsquo;etichetta del prodotto e, se possibile, il veterinario per personalizzare la dieta.</p>
+<h2 id="mcetoc_1irsa8cb0q">Quale quantit&agrave; di pat&eacute; dare al tuo gatto ?</h2>
+<p>Se l&rsquo;alimentazione &egrave; mista, un gatto adulto consuma in media tra&nbsp;<strong>200 e 300 g di cibo umido</strong> (pat&eacute; o bustine) al giorno al quale si aggiungono <strong>50&ndash;80 g di crocchette</strong>. La quantit&agrave; va sempre adattata in base a:</p>
+<ul>
+<li><strong>Peso corporeo e metabolismo individuale</strong></li>
+<li><strong>Livello di attivit&agrave; fisica</strong></li>
+<li><strong>Contenuto calorico del cibo</strong></li>
+</ul>
+<p>&Egrave; consigliabile <strong>pesare regolarmente il gatto adulto</strong> e regolare le dosi per prevenire sovrappeso o carenze.</p>
+<h2 id="mcetoc_1irsa8cb0r">Quando dovrebbe mangiare il tuo gatto ?</h2>
+<p>Il gatto &egrave; un animale abituato a mangiare&nbsp;<strong>molto spesso e in piccole quantit&agrave;</strong>: pu&ograve; arrivare a fare <strong>10&ndash;20 mini-pasti al giorno</strong>. Questo comportamento riflette la sua natura di cacciatore solitario e si adatta perfettamente al suo <strong>sistema digerente corto</strong>. Limitare i pasti a 2&ndash;3 al giorno, come si fa con i cani, pu&ograve; provocare <strong>frustrazione, stress o comportamenti aggressivi</strong> (nota come &ldquo;sindrome della tigre&rdquo; e caratterizzata dalla comparsa violenta e improvvisa di graffi, morsi, sibili&nbsp; conseguenti alla frustrazione e sensazione di fame). Meglio quindi lasciare sempre del cibo a disposizione, se possibile.</p>
+<p><img src="https://www.dogtore.it/media/wysiwyg/Dogtore_IT/dove-mettere-ciotola-gatto.jpg" alt="Gattino che mangia dalla ciotola: l&rsquo;importanza di scegliere il posto giusto per il pasto" loading="lazy"></p>
+<h2 id="mcetoc_1irsa8cb0t">Dove mettere la ciotola del gatto ?</h2>
+<ul>
+<li><strong>In un luogo tranquillo</strong>, lontano da rumori e passaggi frequenti, dove il gatto si sente al sicuro. Evita di disturbare il tuo felino durante i suoi pasti (niente coccole o troppo rumore).</li>
+<li><strong>Lontano dalla lettiera e dalla cuccia</strong>, per rispettare la separazione naturale tra le aree di alimentazione, riposo ed eliminazione.</li>
+<li><strong>In alto, se possibile</strong>, cos&igrave; da offrire una posizione strategica e rassicurante (fuori dalla portata di possibili nemici!).</li>
+<li><strong>Ciotole separate per cibo e acqua</strong>, perch&eacute; il gatto preferisce non contaminare la fonte d&rsquo;acqua con il cibo.</li>
+</ul>
+<p>Sul nostro sito Dogtore.it ti proponiamo, nella nostra sezione Accessori per gatti,&nbsp; un ampia selezione di <a href="https://www.dogtore.it/gatto/accessori-gatto/ciotola-gatto.html">ciotole</a> per il tuo animale domestico. Il tuo amico di zampa &egrave; molto vorace ? Offrigli una<a href="https://www.dogtore.it/gatto/accessori-gatto/ciotola-gatto/tipologia/ciotola-gatto-anti-ingozzamento.html"> ciotola anti-ingozzamento</a>: <strong>favorisce un'alimentazione pi&ugrave; lenta</strong> e naturale, fino a 10 volte pi&ugrave; prolungata! Trasforma il pasto dei gatti golosi in un'<strong>esperienza slow.</strong></p>
+<h2 id="mcetoc_1irsa8cb0u">Come nutrire un gatto d&rsquo;appartamento ?</h2>
+<p><strong>L&rsquo;alimentazione di un gatto che vive esclusivamente in casa</strong> deve essere controllata per <strong>evitare un eccesso calorico</strong>, visto che la sua attivit&agrave; fisica &egrave; ridotta. &Egrave; importante scegliere cibi <strong>arricchiti con fibre</strong>, che<strong> aiutano la digestione</strong> e favoriscono l&rsquo;<strong>eliminazione dei boli di pelo</strong> ingeriti durante le leccate.</p>
+<p><strong>La sedentariet&agrave; aumenta il rischio di obesit&agrave;</strong> e pu&ograve; favorire la<strong> formazione di calcoli urinari</strong>. Per questo motivo, &egrave; fondamentale adottare una <strong>dieta specifica per gatti indoor</strong>, bilanciata e studiata per mantenere il benessere e la salute del tuo micio.</p>
+<h2 id="mcetoc_1irsa8cb0v">Come nutrire il mio gatto anziano ? Qual &egrave; il miglior cibo per lui ?</h2>
+<p>&Egrave; fondamentale adattare la&nbsp;<a href="https://www.dogtore.it/gatto/alimentazione-gatto/fasce-d-eta-gatto/alimentazione-gatto-eta-senior.html">dieta di un gatto che ha raggiunto gli 8-10 anni</a> per preservarne la salute e il benessere. Con l&rsquo;avanzare dell&rsquo;et&agrave;, l&rsquo;attivit&agrave; fisica diminuisce e, di conseguenza, il fabbisogno energetico si riduce di circa il 20% rispetto a un gatto adulto.</p>
+<p><strong>Le proteine</strong> devono essere di<strong> ottima qualit&agrave;</strong> e presenti in <strong>quantit&agrave; adeguata</strong> per supportare la muscolatura senza <strong>sovraccaricare i reni</strong>, che diventano pi&ugrave; fragili con l&rsquo;et&agrave;. &Egrave; importante <strong>limitare l&rsquo;apporto di fosforo</strong> per proteggere la funzionalit&agrave; renale.</p>
+<p>Inoltre, l&rsquo;alimentazione deve prevedere una <strong>maggiore quantit&agrave; di vitamine</strong> per sostenere il sistema immunitario, spesso pi&ugrave; debole negli animali anziani.</p>
+<p>In sintesi, &egrave; fondamentale <strong>offrire al tuo gatto anziano un cibo di qualit&agrave;, bilanciato</strong>, che garantisca un apporto adeguato di nutrienti, evitando eccessi calorici.</p>
+<h2 id="mcetoc_1irsa8cb010">Come nutrire il tuo gatto sterilizzato ?</h2>
+<p><strong>La sterilizzazione</strong> modifica il metabolismo del gatto (o della gatta), rendendolo pi&ugrave; predisposto al sovrappeso e a problemi urinari come i calcoli renali (urolitiasi). Per questo motivo, <a href="https://www.dogtore.it/gatto/alimentazione-gatto/crocchette-gatto/crocchette-gatto-sterilizzato.html">la dieta di un gatto sterilizzato </a>deve essere attentamente bilanciata.</p>
+<p>&Egrave; consigliato offrire un&rsquo;alimentazione con:</p>
+<ul>
+<li><strong>Contenuto ridotto di materie grasse</strong> per evitare l&rsquo;aumento di peso.</li>
+<li><strong>Proteine di alta qualit&agrave;</strong>, con un elevato valore nutrizionale, per mantenere la massa muscolare.</li>
+<li>Una<strong> quantit&agrave; adeguata di fibre</strong>, per favorire il transito intestinale e prevenire problemi digestivi.</li>
+<li>Un <strong>buon equilibrio di vitamine e sali minerali</strong>, fondamentali per la salute generale e la prevenzione delle urolitiasi.</li>
+</ul>
+<p>Esistono prodotti specifici formulati per gatti sterilizzati, che forniscono il giusto apporto energetico e nutrizionale: devono essere di ottima qualit&agrave; (proteine &#8203;&#8203;ad alto valore nutrizionale). &Egrave; molto importante dosare bene il cibo e pesare regolarmente il gatto, idealmente ogni mese, per monitorare il peso ed evitare il sovrappeso.</p>
+<p>Leggi il nostro articolo: <a href="https://www.dogtore.it/quali-sono-le-migliori-crocchette-per-gatto-sterilizzato">Quali sono le migliori crocchette per gatto sterilizzato ?</a></p>
+<h2 id="mcetoc_1irsa8cb011">Quanta acqua deve bere un gatto al giorno ?</h2>
+<p>I gatti hanno <strong>bisogno di acqua fresca ogni giorno</strong>. La quantit&agrave; di acqua necessaria per una buona idratazione e il suo fabbisogno dipenderanno ovviamente dalla taglia del tuo gatto e dal periodo dell'anno, ma anche dalla sua alimentazione. Le crocchette contengono in media il 10% di acqua e l'80% per i pat&eacute;. <strong>Si stima che un gatto di 5 kg dovrebbe bere circa 250 ml di acqua al giorno</strong>. Gattini e gatti anziani bevono pi&ugrave; acqua degli adulti.</p>
+<p>Dovresti preoccuparti se noti che&nbsp;<strong>il tuo gatto beve troppo poco o troppo</strong>: questo potrebbe essere un segno di una patologia sottostante (sindrome da poliuro &ndash; polidipsia caratteristica dell'insufficienza renale).</p>
+<p><strong>Tieni sempre a disposizione del tuo gatto dell'acqua fresca e pulita !</strong></p>
+<p><strong><img src="https://www.dogtore.it/media/wysiwyg/Dogtore_IT/gatti-bevono-fontana-acqua.jpg" alt="Gatti che bevono da una fontanelle d'acqua: quantit&agrave; d'acqua necessaria al giorno " loading="lazy"></strong></p>
+<h2 id="mcetoc_1irsa8cb012">Perch&eacute; i gatti hanno tendenza a non bere (abbastanza) ?</h2>
+<p>Non &egrave; vero che i gatti non bevono: semplicemente&nbsp;<strong>bevono poco</strong>, perch&eacute; sono originari di zone desertiche e il loro organismo &egrave; abituato a trattenere l&rsquo;acqua. Tuttavia, hanno comunque bisogno di circa <strong>50 ml per kg di peso al giorno</strong>.</p>
+<p>Se sembra che bevano troppo poco, possiamo <strong>invogliarli</strong> a farlo:</p>
+<ul>
+<li>offrendo <strong>pat&eacute; </strong>(pi&ugrave; ricco d&rsquo;acqua essendo composti per oltre l'80% da acqua)&nbsp;<strong>o alimentazione mista</strong> (crocchette + pat&eacute;),</li>
+<li>usando <strong>ciotole in ceramica o vetro</strong> (senza odore rispetto alla plastica),</li>
+<li><strong>cambiando spesso l&rsquo;acqua </strong>(minimo ogni giorno),</li>
+<li><strong>allontanando</strong> l&rsquo;acqua dal cibo,</li>
+<li>o usando <a href="https://www.dogtore.it/gatto/accessori-gatto/fontana-d-acqua.html"><strong>fontanelle</strong></a> con acqua corrente, che i gatti trovano pi&ugrave; stimolante (<strong> i</strong>&nbsp;gatti amano l'acqua che sgorga da rubinetti, vasi di fiori, di pioggia nelle pozzanghere&hellip;..)</li>
+</ul>
+<h2 id="mcetoc_1irsa8cb013">Si pu&ograve; dare il latte al gatto ?</h2>
+<p>In generale, <strong>&egrave; sconsigliato dare latte al gatto adulto</strong>. Dopo lo svezzamento, molti gatti perdono la capacit&agrave; di digerire <strong>lattosio</strong> (zucchero del latte) -&nbsp; in seguito alla scomparsa della secrezione di lattasi, un enzima che ne permette la digestione - o <strong>proteine del latte</strong> (caseina), sviluppando <strong>intolleranze</strong> o <strong>allergie</strong> che causano disturbi digestivi (diarrea, gonfiore) o reazioni cutanee (rossore e prurito).</p>
+<p>Alcuni gatti, per&ograve;, mantengono una <strong>tolleranza parziale</strong>: in questi casi si pu&ograve; somministrare <strong>piccole quantit&agrave;</strong> (massimo 10 ml per kg al giorno). L&rsquo;acqua resta comunque <strong>la miglior fonte di idratazione</strong>.</p>
+<p>Per maggiore informazioni leggi il nostro articolo <a href="https://www.dogtore.it/gatto-e-latte-fa-bene-o-male">Dare latte ai gatti: un abitudine da evitare ?</a></p>
+<h2 id="mcetoc_1irsa8cb014">FAQ</h2>
+<h3 id="mcetoc_1irsa8cb015">Come risparmiare sul cibo per gatti senza rinunciare alla qualit&agrave; ?</h3>
+<p>Acquistare online su Dogtore.it &egrave; una strategia efficace per risparmiare: il sito offre <a href="https://www.dogtore.it/gatto/alimentazione-gatto.html">un'<strong>ampia selezione di alimenti premium</strong> per gatti</a>, sia fisiologici che dietetici, a <strong>prezzi competitivi</strong>. Trovi marchi di riferimento come <strong>Hill&rsquo;s</strong>, <strong>Royal Canin</strong>, <strong>Specific</strong>, <strong>Purina Pro Plan</strong>, e formule veterinarie per esigenze specifiche (reni, vie urinarie, sovrappeso, ecc.). Approfitta anche delle <strong>offerte a tempo e dei formati convenienza</strong>.</p>
+<p><strong>Consiglio:</strong> <a href="https://www.dogtore.it/newsletter/inscription/">iscriviti alla newsletter Dogtore.it</a> per ricevere sconti esclusivi e promozioni periodiche.</p>
+<h3 id="mcetoc_1irsa8cb016">Come conservare il cibo per gatti ?</h3>
+<p>Ecco una guida completa per la <strong>corretta conservazione del cibo per gatti</strong>, sia secco che umido, per mantenerne freschezza, propriet&agrave; nutritive e sicurezza:</p>
+<h4>1. Cibo Secco (Croccantini)</h4>
+<ul>
+<li><strong>Dopo l'apertura</strong>:<br>
+<ul>
+<li>Conservare&nbsp;in un <strong>contenitore ermetico, preferibilmente </strong>nella <strong>confezione originale</strong>. Scopri, nella nostra sezione Accessori pe gatto,&nbsp; la nostra selezione di <a href="https://www.dogtore.it/gatto/accessori-gatto.html?tipo-di-prodotto=contenitori">contenitori salva-freschezza per crocchette.</a></li>
+<li>Utilizzare contenitori in plastica per alimenti o vetro con chiusura a tenuta d'aria.</li>
+<li>Evitare contenitori metallici (possono ossidarsi).</li>
+</ul>
+</li>
+<li><strong>Dove riporlo</strong>:<br>
+<ul>
+<li>In un luogo <strong>fresco (&lt;25&deg;C), asciutto e al riparo da luce/sorgenti di calore</strong> (es. non vicino a fornelli o finestre).</li>
+<li>Lontano da prodotti per la pulizia o umidit&agrave; (es. non sotto il lavello).</li>
+</ul>
+</li>
+<li><strong>Durata</strong>:<br>
+<ul>
+<li><strong>Non superare i 2-3 mesi dall'apertura</strong> (anche se la scadenza &egrave; pi&ugrave; lunga).</li>
+<li>Controllare odore e colore: se rancido o con muffe, buttarlo.</li>
+</ul>
+</li>
+</ul>
+<h4>2. Cibo Umido (Scatolette/Bustine)</h4>
+<ul>
+<li><strong>Non aperto</strong>:<br>
+<ul>
+<li>Conservare in <strong>dispensa</strong>.</li>
+<li>Evitare sbalzi termici e temperature sotto 0&deg;C (alterano consistenza e gusto).</li>
+</ul>
+</li>
+<li><strong>Dopo l'apertura</strong>:<br>
+<ul>
+<li>Trasferire preferibilmente in&nbsp;<strong>contenitore di vetro/plastica per alimenti</strong> con coperchio.</li>
+<li><strong>Frigorifero (4&deg;C) per max 48 ore</strong> (se avanzato).</li>
+<li>Scaldare a temperatura ambiente prima di servire (mai microonde).</li>
+<li><strong>&nbsp;Puoi trovare, nella nostra sezione Accessori per gatto, pratici <a href="https://www.dogtore.it/trixie-2-couvercles-pour-boite-en-silicone-7-6-cm.html">coperchi per lattine e vasetti</a>.</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="mcetoc_1irsa8cb017">Quale distributore di cibo per gatti scegliere ?</h3>
+<p>Il gatto &egrave; un animale abituato a consumare<strong> diversi piccoli pasti nell&rsquo;arco della giornata</strong>, comportamento legato alla struttura del suo apparato digerente, relativamente corto. Per rispettare questa esigenza naturale, i<a href="https://www.dogtore.it/gatto/accessori-gatto/distributore-crocchette-gatto.html"> distributori automatici o manuali di crocchette</a> rappresentano una <strong>soluzione pratica, soprattutto in caso di assenza</strong>.</p>
+<p>Oltre a <strong>offrire pi&ugrave; pasti al giorno a orari regolari</strong>, questi dispositivi permettono di <strong>controllare le porzioni</strong>, aiutandoti a gestire meglio la dieta del tuo micio, <strong>soprattutto se tende al sovrappeso</strong>.</p>
+<p>Sul mercato esiste un'ampia gamma di modelli &ndash; da quelli pi&ugrave; semplici a <a href="https://www.dogtore.it/gatto/accessori-gatto/distributore-crocchette-gatto/distributore-crocchette-programmabile-gatto.html">quelli programmabili</a> &ndash; per ogni esigenza e fascia di prezzo.</p>
+<p>Sul nostro sito Dogtore.it trovi una selezione dei migliori <a href="https://www.dogtore.it/gatto/accessori-gatto/distributore-crocchette-gatto.html"><strong>distributori di cibo per gatti</strong></a> (come quelli di brand rinomati: PetSafe, Catit...) e di <a href="https://www.dogtore.it/gatto/accessori-gatto/fontana-d-acqua.html">fontane d'acqua</a> per aiutarti a nutrire il tuo gatto nel modo pi&ugrave; comodo e controllato possibile.</p>
+<h3 id="mcetoc_1irsa8cb018">Qual &egrave; il migliore cibo renal per gatti ?</h3>
+<p>Un <strong>gatto con insufficienza renale</strong> cronica ha bisogno di una dieta specifica per alleggerire il lavoro dei reni e rallentare la progressione della malattia. Gli alimenti renal devono contenere poco fosforo e sodio, proteine di altissima qualit&agrave; in quantit&agrave; moderate, e apportare nutrienti essenziali come vitamine, calcio, potassio e acidi grassi Omega 3. Anche l'appetibilit&agrave; &egrave; fondamentale, poich&eacute; molti gatti in questa condizione tendono a mangiare poco.</p>
+<p>Puoi trovare sul nostro sito una <a href="https://www.dogtore.it/gatto/alimentazione-gatto.html?regime-alimentare=problemi-ai-reni">vasta gamma di cibi renal&nbsp;</a>completi e bilanciati, come:</p>
+<ul>
+<li><strong>Royal Canin Renal</strong> (crocchette, bustine o pat&eacute;)</li>
+<li><strong>Pro Plan NF Renal Function</strong></li>
+<li><strong>Hill&rsquo;s Prescription Diet k/d</strong></li>
+<li><strong>Specific FKW/FKD</strong></li>
+<li><strong>Advance Veterinary Diet Renal</strong></li>
+<li><strong>Virbac HPM Kidney Support</strong></li>
+</ul>
+<p>Evita invece gli alimenti acidificanti o troppo poveri di potassio (utilizzati nelle gamme per limitare la formazione di alcuni calcoli urinari), controindicati in caso di insufficienza renale.</p>
+<p><strong>Per maggiore informazioni leggi il nostro articolo presto disponibile sul nostro blog: </strong>Come scegliere il giusto alimento 'renal' per un gatto con insufficienza renale ?</p>
+</div>
+      <div class="author-box">
+        <div class="ph">TV</div>
+        <div><div class="role">Scritto e verificato da</div><h4>Il Team Veterinario del gruppo La Compagnie des Animaux</h4>
+        <p>I nostri veterinari sono a tua disposizione via e-mail dal lunedì al venerdì, dalle 9:00 alle 17:00.</p>
+        <a href="index.html">Tutte le guide dei nostri veterinari &gt;</a></div>
+      </div>
+    </article>
+    <aside>
+      <div class="push">
+        <div class="push-h">Il consiglio del veterinario</div>
+        <a class="push-main" href="https://www.dogtore.it/dogteur-crocchette-premium-senza-cereali-per-gatto-sterilizzato-6-kg.html">
+          <span class="promo">-15%</span>
+          <img src="https://www.dogtore.it/media/catalog/product/cache/1c273764364f749adbf3002a3b57e765/d/o/dogteur_croquettes_premium_sans_c_r_ales_chat_st_rilis_6_kg_1_.jpg" alt="Dogteur Premium senza cereali gatto sterilizzato 6 kg">
+          <span class="pname">Dogteur Premium senza cereali gatto sterilizzato 6 kg</span>
+          <span class="price"><s>53,99 €</s> <b>45,89 €</b></span>
+          <span class="kg">7,65 € / kg</span>
+        </a>
+        <a class="btn-cart-add" href="https://www.dogtore.it/dogteur-crocchette-premium-senza-cereali-per-gatto-sterilizzato-6-kg.html">Aggiungi al Carrello</a>
+        <div class="push-alt">
+          <a href="https://www.dogtore.it/virbac-veterinary-hpm-adult-neutered-cat-12-kg.html"><img src="https://www.dogtore.it/media/catalog/product/cache/1c273764364f749adbf3002a3b57e765/v/i/virbac_veterinary_hpm_adult_neutered_cat_12_kg.jpg" alt=""><span>Virbac Veterinary HPM Adult Neutered Cat 12 kg<b>88,65 €</b></span></a>
+          <a href="https://www.dogtore.it/specific-gatto-fxd-adult-7-kg.html"><img src="https://www.dogtore.it/media/catalog/product/cache/1c273764364f749adbf3002a3b57e765/s/p/specific-chat-fxd-adult-7-kg.jpg" alt=""><span>Specific Gatto FXD Adult 7 kg<b>49,99 €</b></span></a>
+        </div>
+        <a class="push-all" href="https://www.dogtore.it/gatto/alimentazione-gatto.html">Vedi tutte le crocchette gatto &gt;</a>
+      </div>
+    </aside>
+  </div>
+</div>
+<section class="related"><div class="wrap">
+  <h2 class="sec-title">Continua a leggere</h2>
+  <p class="sec-sub">Altre guide dei nostri veterinari sul gatto</p>
+  <div class="grid"><a class="card" href="https://www.dogtore.it/guida-come-evitare-i-vomiti-di-boli-di-pelo-nel-gatto"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/cms/Comment_eliminer_les_boules_de_poils_du_chat.jpg)"><span class="t">Salute</span></div><div class="body"><h3>Come eliminare i boli di pelo nel gatto ? Cause, sintomi e trattamenti</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div><div class="dt"><span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Aggiornato il 27 feb 2026</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>13 min di lettura</span></div></div></a><a class="card" href="https://www.dogtore.it/cistite-gatto-cause-sintomi-cura-rimedi-naturali"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/cms/Marquage_Urinaire_Chat.jpg)"><span class="t">Salute</span></div><div class="body"><h3>Tutto quello che devi sapere sulla cistite del gatto</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div><div class="dt"><span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Aggiornato il 29 lug 2025</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>14 min di lettura</span></div></div></a><a class="card" href="https://www.dogtore.it/il-diabete-nel-gatto"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/Il_diabete_nel_gatto.jpg)"><span class="t">Alimentazione</span></div><div class="body"><h3>Il diabete nei gatti : cosa fare per curarlo ?</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div><div class="dt"><span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Aggiornato il 27 nov 2024</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>12 min di lettura</span></div></div></a><a class="card" href="https://www.dogtore.it/dieta-barf-per-cani-gatti-cose-e-come-funziona"><div class="img" style="background-image:url(https://www.dogtore.it/media/wysiwyg/Dogtore_IT/La_dieta_BARF.jpg)"><span class="t">Alimentazione</span></div><div class="body"><h3>Dieta BARF per cani e gatti : cos'è, benefici e rischi</h3><div class="meta"><span class="av">TV</span>Team Veterinario</div><div class="dt"><span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Aggiornato il 17 lug 2025</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>10 min di lettura</span></div></div></a></div>
+  <div style="text-align:center;margin-top:24px"><a class="btn-out" href="index.html">Tutte le guide</a></div>
+</div></section>
+<section class="help"><div class="wrap">
+  <div><h3>Hai una domanda per i nostri veterinari ?</h3>
+  <p>I nostri veterinari sono a tua disposizione via e-mail dal lunedì al venerdì dalle ore 9:00 alle ore 17:00.</p></div>
+  <a class="btn-orange" href="#">Contatta un veterinario</a>
+</div></section>
+</main>
+
+<div class="reass"><div class="wrap">
+  <div><b>Spedizione 24/48h</b><span>Gratuita a partire da 100€ di acquisto con GLS</span></div>
+  <div><b>Pagamenti sicuri</b><span>Visa, Mastercard, Paypal, Apple Pay, Alma</span></div>
+  <div><b>Soddisfazione garantita</b><span>Reso entro 14 giorni dopo l'ordine</span></div>
+  <div><b>Prodotti di qualità</b><span>Prodotti veterinari e grandi marche + 5 000 referenze</span></div>
+  <div><b>Servizio clienti</b><span>02 87 36 77 78, dal lunedì al venerdì 9:00-17:00</span></div>
+</div></div>
+
+<footer><div class="wrap">
+  <div><h5>Chi siamo ?</h5><a href="https://www.dogtore.it/faq/chi-siamo">Il nostro team</a><a href="#">Informazioni legali</a></div>
+  <div><h5>Bisogno di aiuto</h5><a href="#">Tracciare un pacco</a><a href="#">Restituire un articolo</a><a href="#">Spese di trasporto</a><a href="#">FAQ</a></div>
+  <div><h5>Consigli &amp; guide all'acquisto</h5><a href="#">Alimentazione per cane</a><a href="#">Antiparassitario per gatto</a><a href="#">Tutte le nostre guide</a></div>
+  <div><h5>Al tuo servizio</h5><a href="#">I nostri veterinari via e-mail, dal lunedì al venerdì 9:00-17:00</a></div>
+</div><div class="legal">CGV · Privacy</div></footer>
+
+<div class="note"><b>Maquette datashake</b> : page article Dogtore : push produit en haut à droite, articles liés en bas.</div>
+
+
+</body>
+</html>
